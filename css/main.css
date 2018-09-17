@@ -1,0 +1,69 @@
+html,body
+{
+	margin: auto;
+	width:95%;
+	height:90%;
+	font-family: 'Comfortaa', cursive;
+}
+#map { 
+	border: 5px solid black;
+	background: #000; 
+	height: 100%;
+}
+
+#map { background: #000; height: 100%;}
+.leaflet-tile{ 
+	filter: blur(10px)
+}
+.leaflet-tile.leaflet-tile-loaded{
+	filter: blur(0);
+	transition:.6s all ease-in;
+}
+
+/* 3col header */
+.wrapper{
+	/*
+	min-height: 100vh;
+	 */
+background: white;
+display: flex;
+flex-direction: column;
+}
+.content {
+	display: flex;
+	flex: 1;
+	background: #999;
+	color: #000; 
+}
+.columns{
+	display: flex;
+	flex:1;
+}
+.main{
+	flex: 1;
+	order: 2;
+	background: white;
+	text-align: center;
+	margin:0 auto;
+}
+.sidebar-first{
+	width: 20%;
+	background: white;
+	order: 1;
+	text-align: left;
+}
+.sidebar-second{ 
+	width: 20%;
+	order: 3;
+	background: white;
+	text-align: right;
+}
+
+/* autocomplete */
+input.searchbar {
+	background-image: url("./../img/icon_search.png");
+	background-repeat: no-repeat;
+	background-position: right 10px center;
+	font-style: normal !important;
+	font-family: 'Comfortaa', cursive !important;
+}
