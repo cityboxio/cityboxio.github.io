@@ -7,6 +7,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 		<link href="css/easy-autocomplete.min.css" rel="stylesheet" type="text/css">
 		<link href="css/easy-autocomplete.themes.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 		<link href="css/main.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
@@ -24,7 +25,12 @@
 	   <h1> Cairo, Egypt </h1> 
 			-->
 			<main class="main">
-				opendata hub
+				<div id="typed-strings">
+					<p><strong>opendata</strong> for everyone!</p>
+					<p><em>Use</em> our free <strong>API</strong>s; Build <strong>POWERFUL</strong> applications</p>
+					<p>We <i class="fas fa-heart"></i> <strong>opensource</strong>!</p>
+				</div>
+				<span id="typed"></span>
 			</main>
 			<aside class="sidebar-first">
 				<img src="img/citybox.png" alt="citybox" style="width: 200px">
@@ -102,6 +108,8 @@
 		</br>
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery.easy-autocomplete.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
 		<!--
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.2.1/bloodhound.min.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.10.6/jquery.typeahead.min.js"></script>

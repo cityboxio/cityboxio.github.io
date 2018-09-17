@@ -90,3 +90,10 @@ input.searchbar {
 	z-index:300000000 !important;
 }
 
+/*
+ * fontawesome
+ */
+.fa-heart{
+	color: red;
+	text-shadow: 1px 1px 1px #ccc;
+}

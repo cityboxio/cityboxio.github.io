@@ -40,3 +40,9 @@ L.tileLayer(
 // 	'i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
 
 /*** end of map ***/
+
+/*** start of typed.js ***/
+var typed = new Typed('#typed', {
+	stringsElement: '#typed-strings'
+});
+/*** end of typed.js ***/
