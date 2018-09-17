@@ -1,19 +1,59 @@
 /*** start of autosuggest ***/
 
 var options = {
-	url: "./DATA/fruitsAndVegetables.json",
+	//url: "./../DATA/cities.json",
+	//url: "./DATA/cities.small.json",
+	url: "./DATA/world-cities_json.json",
 	placeholder: "search a city",
-	categories: [
-		{   //Category fruits
-			listLocation: "fruits",
-			header: "-- Fruits --"
-		}, 
-		{   //Category vegetables
-			listLocation: "vegetables",
-			header: "-- Vegetables --"
-		}
-	]
+	adjustWidth: true,	
+	//categories: [
+	//	{   //Category fruits
+	//		listLocation: "Brazil",
+	//		header: "-- Brazil --"
+	//	}, 
+	//	{   //Category vegetables
+	//		listLocation: "Egypt",
+	//		header: "-- Egypt --"
+	//	}
+	//]
 
+	//getValue: "city",
+	//getValue: "name",
+	getValue: function(element) {
+		//return $(element).find("name").text();	
+		return element.name;
+	},
+	list: {
+		match: {
+			enabled: true
+		},
+		sort: {
+			enabled: true
+		},
+		maxNumberOfElements: 10,
+
+		showAnimation: {
+			type: "slide",
+			time: 300
+		},
+		hideAnimation: {
+			type: "slide",
+			time: 300
+		}
+	},
+	template: {
+		type: "custom",
+		method: function(value, item) {
+			//return "<img src='" + item.icon + "' /> | " + item.type + " | " + value;
+			return value + ", " + item.subcountry + ", " + item.country;
+		}
+	}
+	//template: {
+	//	type: "iconRight",
+	////	fields: {
+	//		iconSrc: "icon"
+	//	}
+	//}
 };
 
 $("#categories-basic").easyAutocomplete(options);
