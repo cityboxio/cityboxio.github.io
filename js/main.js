@@ -2,7 +2,7 @@
 
 var options = {
 	url: "./DATA/fruitsAndVegetables.json",
-
+	placeholder: "search a city",
 	categories: [
 		{   //Category fruits
 			listLocation: "fruits",
