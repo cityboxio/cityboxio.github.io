@@ -83,6 +83,8 @@ L.tileLayer(
 
 /*** start of typed.js ***/
 var typed = new Typed('#typed', {
-	stringsElement: '#typed-strings'
+	stringsElement: '#typed-strings',
+	backDelay: 900,
+	typeSpeed: 40
 });
 /*** end of typed.js ***/
