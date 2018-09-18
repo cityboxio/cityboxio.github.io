@@ -5,7 +5,7 @@ var options = {
 	//url: "./DATA/cities.small.json",
 	url: "./DATA/world-cities_json.json",
 	placeholder: "search a city",
-	adjustWidth: true,	
+	//adjustWidth: true,	
 	//categories: [
 	//	{   //Category fruits
 	//		listLocation: "Brazil",
@@ -28,9 +28,9 @@ var options = {
 			enabled: true
 		},
 		sort: {
-			enabled: true
+			enabled: false 
 		},
-		maxNumberOfElements: 10,
+		maxNumberOfElements: 20,
 
 		showAnimation: {
 			type: "slide",
