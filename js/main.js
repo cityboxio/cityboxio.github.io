@@ -33,16 +33,9 @@ var options = {
 		method: function(value, item) {
 			//return "<img src='" + item.icon + "' /> | " + item.type + " | " + value;
 			return "</br>" + 
-				"<h4>" + 
-				value + 
-				"</h4>" + 
-				item.subcountry + "," + 
-				"&nbsp;" + 
-				"&nbsp;" + 
-				item.country + 
-				"&nbsp;" + 
-				"&nbsp;" + 
-				'<img src="img/datasources/worldbank.png" alt="worldbank" style="width: 20px">'+
+			       "</br>" + 
+				"<b>" + value + "</b>" + ", " + item.subcountry + ", " + item.country + "&nbsp;&nbsp;" + '<img src="img/datasources/worldbank.png" alt="worldbank" style="width: 20px">'+
+				"</br>" +
 				"</br>" +
 				"</br>"  
 			;
