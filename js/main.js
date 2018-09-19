@@ -50,7 +50,7 @@ var options = {
 				item.country + 
 				'<img src="img/flags/'+ 
 				findFlag(item.country).toLowerCase() + 
-				'.svg" alt="flag" style="width: 40px; float: right;box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);">'+
+				'.svg" alt="flag" style="width: 40px; float: right;" class="flag">'+
 				"</br>" +
 				"</br>" +
 				"</br>"  
