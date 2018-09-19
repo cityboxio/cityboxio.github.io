@@ -30,8 +30,10 @@ html,body
 	display: flex;
 	align-items: center;
 	margin: 10px;
-	height: 120px;
-	flex-wrap: wrap;
+	/* 
+	 * height: 120px;
+	*/
+flex-wrap: wrap;
 }
 .left {
 	flex-grow: 2;
