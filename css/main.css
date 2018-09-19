@@ -30,18 +30,18 @@ html,body
 	display: flex;
 	align-items: center;
 	margin: 10px;
-	margin-left: 20px;
-	margin-right: 200px;
 	height: 120px;
+	flex-wrap: wrap;
 }
 .left {
 	flex-grow: 2;
 	height: 140px; /* min-height: 10vh;*/
 	width: 140px; 
 	text-align: center;
-	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .right {
+	margin-bottom: 40px;
 	flex-grow: 1;
 }
 
