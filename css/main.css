@@ -36,9 +36,10 @@ html,body
 }
 .left {
 	flex-grow: 2;
-	height: 120px; /* min-height: 10vh;*/
-	width: 120px; 
+	height: 140px; /* min-height: 10vh;*/
+	width: 140px; 
 	text-align: center;
+	margin-top: 20px;
 }
 .right {
 	flex-grow: 1;
