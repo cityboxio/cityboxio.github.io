@@ -17,7 +17,7 @@ var options = {
 		sort: {
 			enabled: true 
 		},
-		maxNumberOfElements: 3,
+		maxNumberOfElements: 5,
 
 		showAnimation: {
 			type: "slide",
@@ -33,9 +33,9 @@ var options = {
 		method: function(value, item) {
 			//return "<img src='" + item.icon + "' /> | " + item.type + " | " + value;
 			return "</br>" + 
-				"<h3>" + 
+				"<h4>" + 
 				value + 
-				"</h3>" + 
+				"</h4>" + 
 				item.subcountry + "," + 
 				"&nbsp;" + 
 				"&nbsp;" + 
