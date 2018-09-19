@@ -34,7 +34,7 @@ var options = {
 			//return "<img src='" + item.icon + "' /> | " + item.type + " | " + value;
 			return "</br>" + 
 				"</br>" + 
-				"<b>" + value + "</b>" + ", " + item.subcountry + ", " + item.country + "&nbsp;&nbsp;" + '<img src="img/datasources/worldbank.png" alt="worldbank" style="width: 20px">'+
+				"<b>" + value + "</b>" + ", " + item.subcountry + ", " + item.country + "&nbsp;&nbsp;" + '<img src="img/datasources/worldbank.png" alt="worldbank" style="width: 40px;   float: right;">'+
 				"</br>" +
 				"</br>" +
 				"</br>"  
