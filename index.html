@@ -11,17 +11,16 @@
 		<link href="css/main.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-<!--
-	<div id="map" style="width: 900px; height: 900px"></div>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.10.6/jquery.typeahead.css" type="text/css">
-		<link href="css/easy-autocomplete.themes.min.css.map" rel="stylesheet" type="application/json">
-		<link href="css/maps/easy-autocomplete.themes.min.css.map" rel="stylesheet" type="application/json">
-		<link href="css/maps/easy-autocomplete.min.css.map" rel="stylesheet" type="text/css">
--->
-<div class="wrapper">
-	<section class="content">
-		<div class="columns">
-			<aside class="sidebar-first logo">
+		<!--
+	  <div id="map" style="width: 900px; height: 900px"></div>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.10.6/jquery.typeahead.css" type="text/css">
+	  <link href="css/easy-autocomplete.themes.min.css.map" rel="stylesheet" type="application/json">
+	  <link href="css/maps/easy-autocomplete.themes.min.css.map" rel="stylesheet" type="application/json">
+	  <link href="css/maps/easy-autocomplete.min.css.map" rel="stylesheet" type="text/css">
+		-->
+
+		<div class="parent">  
+			<div class="left">
 				<img src="img/citybox.png" alt="citybox" style="width: 250px">
 				</br>
 				<div id="typed-strings">
@@ -39,32 +38,31 @@
 					-->
 				</div>
 				<span id="typed"></span>
-			</aside>
 
-			<aside class="sidebar-second">
-				</br>
+			</div>
+			<div class="right">
 				<input class="searchbar" id="categories-basic" autofocus />	
-			</aside>
-			<!--	
-			-->	
-		</div>
-	</section>
-</div>
+				</br>
+				</br>
+			</div>
+		</div> 
+
+		</br>
 
 		<div id="map"></div>
 		</br>
 		</br>
-		 <hr>
-		 </br>
-		 <div>
-			 Data from providerA and its datasets;
-		 </div>
-		 <img src="img/datasources/worldbank.png" alt="worldbank" style="width: 250px">
+		<hr>
 		</br>
-		 <hr>
-		 </br>
-		 <div>
-		 Data from providerB and its datasets	
+		<div>
+			Data from providerA and its datasets;
+		</div>
+		<img src="img/datasources/worldbank.png" alt="worldbank" style="width: 250px">
+		</br>
+		<hr>
+		</br>
+		<div>
+			Data from providerB and its datasets	
 		</div>
 
 		</br>
@@ -78,7 +76,7 @@
 		<hr>
 		</br>
 		<div>
-		Archive section for downloading collected documents	
+			Archive section for downloading collected documents	
 		</div>
 		</br>
 		<hr>
@@ -102,7 +100,7 @@
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.10.6/jquery.typeahead.min.js"></script>
 
 	  -->
-		<script src="js/leaflet.js"></script>
-		<script src="js/main.js"></script>
+	  <script src="js/leaflet.js"></script>
+	  <script src="js/main.js"></script>
 	</body>
 </html>

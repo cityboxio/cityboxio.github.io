@@ -25,6 +25,18 @@ html,body
 	transition:.6s all ease-in;
 }
 
+/* 2col header */
+.parent {
+	display: flex;
+	align-items: center;
+	margin: 10px;
+}
+.left {
+	flex-grow: 1;
+	min-height: 30vh;
+	text-align: center;
+}
+
 /* 3col header */
 .wrapper{
 	/*
