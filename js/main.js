@@ -17,7 +17,7 @@ var options = {
 		sort: {
 			enabled: true 
 		},
-		maxNumberOfElements: 5,
+		maxNumberOfElements: 3,
 
 		showAnimation: {
 			type: "slide",
@@ -33,13 +33,17 @@ var options = {
 		method: function(value, item) {
 			//return "<img src='" + item.icon + "' /> | " + item.type + " | " + value;
 			return "</br>" + 
+				"<h3>" + 
 				value + 
-				", </br>" + 
-				'<div style="">' +
-				item.subcountry + ", " + item.country + 
+				"</h3>" + 
+				item.subcountry + "," + 
 				"&nbsp;" + 
 				"&nbsp;" + 
-				'<img src="img/datasources/worldbank.png" alt="worldbank" style="width: 40px"> </div>' +
+				item.country + 
+				"&nbsp;" + 
+				"&nbsp;" + 
+				'<img src="img/datasources/worldbank.png" alt="worldbank" style="width: 20px">'+
+				"</br>" +
 				"</br>"  
 			;
 		}
