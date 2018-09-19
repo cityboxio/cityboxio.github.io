@@ -35,13 +35,13 @@ html,body
 	height: 120px;
 }
 .left {
+	flex-grow: 2;
+	height: 120px; /* min-height: 10vh;*/
+	width: 120px; 
+	text-align: center;
+}
+.right {
 	flex-grow: 1;
-	height: 120px;
-	/*
-	 * min-height: 10vh;
-	 */
-
-text-align: center;
 }
 
 .logo{
