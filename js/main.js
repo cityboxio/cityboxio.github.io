@@ -33,7 +33,7 @@ var options = {
 		method: function(value, item) {
 			//return "<img src='" + item.icon + "' /> | " + item.type + " | " + value;
 			return "</br>" + 
-			       "</br>" + 
+				"</br>" + 
 				"<b>" + value + "</b>" + ", " + item.subcountry + ", " + item.country + "&nbsp;&nbsp;" + '<img src="img/datasources/worldbank.png" alt="worldbank" style="width: 20px">'+
 				"</br>" +
 				"</br>" +
@@ -83,3 +83,9 @@ var typed = new Typed('#typed', {
 	typeSpeed: 1
 });
 /*** end of typed.js ***/
+
+console.log("Hello world!"); 
+
+$( document ).ready(function() {
+	console.log( "ready!" );
+});
