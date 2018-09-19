@@ -45,7 +45,8 @@ var options = {
 		type: "custom",
 		method: function(value, item) {
 			//return "<img src='" + item.icon + "' /> | " + item.type + " | " + value;
-			return value + ", " + item.subcountry + ", " + item.country;
+			return value + ", </br>" + item.subcountry + ", " + item.country + '<img src="img/datasources/worldbank.png" alt="worldbank" style="width: 40px"> <hr>'
+			;
 		}
 	}
 	//template: {
