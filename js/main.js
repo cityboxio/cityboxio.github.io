@@ -71,7 +71,7 @@ $("#categories-basic").easyAutocomplete(options);
 /*** start of map ***/
 
 //var map = L.map('map').setView([-41.2858, 174.78682], 14);
-var map = L.map('map').setView([31.205753, 29.924526], 14);
+var map = L.map('map').setView([31.205753, 29.924526], 11);
 //var map = L.map('map').setView([30.2, 31], 8);
 mapLink = 
 	'<a href="https://www.citybox.io/copyright">citybox.io</a>';
