@@ -6,19 +6,6 @@ var options = {
 	url: "./DATA/world-cities_json.json",
 	placeholder: "search a city",
 	//adjustWidth: true,	
-	//categories: [
-	//	{   //Category fruits
-	//		listLocation: "Brazil",
-	//		header: "-- Brazil --"
-	//	}, 
-	//	{   //Category vegetables
-	//		listLocation: "Egypt",
-	//		header: "-- Egypt --"
-	//	}
-	//]
-
-	//getValue: "city",
-	//getValue: "name",
 	getValue: function(element) {
 		//return $(element).find("name").text();	
 		return element.name;
@@ -30,7 +17,7 @@ var options = {
 		sort: {
 			enabled: true 
 		},
-		maxNumberOfElements: 7,
+		maxNumberOfElements: 5,
 
 		showAnimation: {
 			type: "slide",
@@ -45,7 +32,15 @@ var options = {
 		type: "custom",
 		method: function(value, item) {
 			//return "<img src='" + item.icon + "' /> | " + item.type + " | " + value;
-			return value + ", </br>" + item.subcountry + ", " + item.country + '<img src="img/datasources/worldbank.png" alt="worldbank" style="width: 40px"> <hr>'
+			return "</br>" + 
+				value + 
+				", </br>" + 
+				'<div style="">' +
+				item.subcountry + ", " + item.country + 
+				"&nbsp;" + 
+				"&nbsp;" + 
+				'<img src="img/datasources/worldbank.png" alt="worldbank" style="width: 40px"> </div>' +
+				"</br>"  
 			;
 		}
 	}
