@@ -28,9 +28,9 @@ var options = {
 			enabled: true
 		},
 		sort: {
-			enabled: false 
+			enabled: true 
 		},
-		maxNumberOfElements: 20,
+		maxNumberOfElements: 7,
 
 		showAnimation: {
 			type: "slide",
