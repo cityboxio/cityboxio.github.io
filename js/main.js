@@ -39,6 +39,14 @@ var options = {
 		hideAnimation: {
 			type: "slide",
 			time: 300
+		},
+		onChooseEvent: function(value, item) {
+			var value = $("#categories-basic").getSelectedItemData().name;
+			var all = $("#categories-basic").getSelectedItemData();
+			//alert(value);
+			//alert(all.toSource());
+			//alert(all.country);
+			//$("#data-holder").val(value).trigger("change");
 		}
 	},
 	template: {
@@ -56,7 +64,7 @@ var options = {
 				item.country +
 				'<img src="img/flags/'+ 
 				findFlag(item.country).toLowerCase() +
-				'.svg" alt="flag" style="width: 40px; float: right;" class="flag">'+
+				'.svg" alt="flag" style="width: 40px; height: 20; float: right;" class="flag">'+
 				"</br>" +
 				"</br>" +
 				"</br>"  
