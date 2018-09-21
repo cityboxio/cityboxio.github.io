@@ -111,6 +111,8 @@ wholink='';
 //L.tileLayer('http://b.tile.stamen.com/toner-hybrid/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
 //L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
+//L.tileLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
+
 // 
 // mapLink = 
 // '<a href="http://www.esri.com/">Esri</a>';
