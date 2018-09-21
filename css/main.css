@@ -104,7 +104,14 @@ input.searchbar {
 
 .easy-autocomplete-container ul li {
 	font-size: 14px !important;
+	opacity: 0.9 !important;
 }
+
+.easy-autocomplete-container li:hover {
+	opacity: 1 !important;
+}
+
+
 /*
  * fontawesome
  */
@@ -127,6 +134,7 @@ hr{
 	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
+
 .flag:before, .flag:after
 {
 	content:"";
