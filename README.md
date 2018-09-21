@@ -25,3 +25,12 @@ A Matrix/grid of icons and a topbar or providers. icons contain red/green/dimmed
 with opacity then it is not chosen, without then it is chosen. all photos greyscaled and edited to work with whitebackground.
 <img src="img/datasources/worldbank.png" alt="worldbank" style="width: 250px">
 
+
+TODO
+- loading....
+- make map without border and gradient transpert on the edges, all with black and white tiles to showoff colors when doing geo stuff. Another consderiation for a design would be to use blackandwhite map fullbackground with gradient transparent edges and show controls in the area of the box.
+- make timeline functionality
+- make tagging of data functionality, each tag must have its own geojson. tags should follow the following scheme keyword1:keyword2 where keyword1 is chosen as a start based on aplphaptical order. This should handle the information architecture.
+- make a functionality for showing differnt map tiles. so the basic tile is blackandwhite tile but there should be a photogallery overlay on top of the blackandwhite map showing different tiles in a photogallery autoplay manner. slickslider.js
+- Add everything javascript inside the $.ready thing. 
+- use geoid to build server-side and client side databases. 

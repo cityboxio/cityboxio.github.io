@@ -7,14 +7,34 @@ html,body
 }
 
 #map { 
+	/* 
 	border: 5px solid black;
-	background: #000; 
-	height: 70% !important;
-}
+	opacity: 0.5 !important;
+	 */
+background: white; 
+height: 80% !important;
 
-#map { 
-	background: #000; 
+z-index: 1 !important;
+/* fallback for old browsers */
+background: #000;
+/* simple linear gradient */
+background: linear-gradient(#999, #000);
+ }
+
+.overlay{
+	/*
+	 * display: block;
+	position: relative;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+	width: 100%;
 	height: 100%;
+	content: '';
+*/
+	z-index: 1000000 !important;
+/* fallback for old browsers */
+background: #000;
+/* simple linear gradient */
+background: linear-gradient(#999, #000);
 }
 
 .leaflet-tile{ 
@@ -29,7 +49,7 @@ html,body
 .parent {
 	display: flex;
 	align-items: center;
-	margin: 10px;
+	margin: 5px;
 	/* 
 	 * height: 120px;
 	 */
@@ -37,13 +57,13 @@ flex-wrap: wrap;
 }
 .left {
 	flex-grow: 2;
-	height: 140px; /* min-height: 10vh;*/
+	height: 110px; /* min-height: 10vh;*/
 	width: 140px; 
 	text-align: center;
 	margin-bottom: 20px;
 }
 .right {
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	flex-grow: 1;
 }
 
