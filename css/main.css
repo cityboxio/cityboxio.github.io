@@ -24,7 +24,7 @@ height: 80% !important;
 	 /* background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
 	 /* background: linear-gradient(to right, white, rgba(0, 0, 0, 0)); */
 	 /* background: radial-gradient(farthest-corner at center, rgba(0,0,0,0), white); */
-	 background: radial-gradient(farthest-corner at center, transparent, white 70%);
+	 background: radial-gradient(farthest-corner at center, transparent, white 75%);
 	 pointer-events: none;
 	 z-index: 999;
  }
