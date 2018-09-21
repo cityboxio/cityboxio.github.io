@@ -84,24 +84,29 @@ $("#categories-basic").easyAutocomplete(options);
 
 /*** start of map ***/
 
-//var map = L.map('map').setView([-41.2858, 174.78682], 14);
-var map = L.map('map').setView([31.205753, 29.924526], 11);
-//var map = L.map('map').setView([30.2, 31], 8);
-mapLink = 
-	'<a href="https://www.citybox.io/copyright">citybox.io</a>';
-wholink = 
-	'';
-L.tileLayer(
-	'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-		attribution: '&copy; '+mapLink+', '+wholink,
-		maxZoom: 18,
-	}).addTo(map);
+var map = L.map('map').setView(
+	[31.205753, 29.924526], 
+	11); // alexandria
+
+//var myLayer = L.geoJSON().addTo(map);
+//myLayer.addData(geojsonFeature);
+
+//var geojsonLayer = new L.geoJSON.AJAX("./DATA/cities.geojson");       
+//geojsonLayer.addTo(map);
+var geocities = JSON.parse($.ajax({'url': "./DATA/samples/cities.small.geojson", 'async': false}).responseText); 
+var citiesLayer = new L.geoJSON().addTo(map);
+citiesLayer.addData(geocities);
+
+
+
+mapLink='<a href="https://www.citybox.io/copyright">citybox.io</a>';
+wholink='';
+L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
 // 
 // mapLink = 
 // '<a href="http://www.esri.com/">Esri</a>';
 // wholink = 
 // 	'i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
-
 /*** end of map ***/
 
 /*** start of typed.js ***/
@@ -114,8 +119,34 @@ var typed = new Typed('#typed', {
 });
 /*** end of typed.js ***/
 
-console.log("Hello world!"); 
+/*** tinytoggle ***/
+// Customize default options
+$.fn.TinyToggle.defaults.type = "square";
+
+// Define your custom size and use it
+$.fn.TinyToggle.sizes["mysize"] = "36px";
+$.fn.TinyToggle.defaults.size = "mysize";
+
+// Initialize plug-in    
+$("#datasource_c").tinyToggle({
+	type:    "circle",
+	//palette: "red", 
+	//size:    "huge", // you can also specify defined custom sizes Ex. "mysize"
+	onReady: function() { 
+		/* do something... 
+	alert("hellotiny")
+		 * */ 
+	},
+	onClick: function() { /* do something */ },
+	onChange: function() { /* do something... */ },
+	onCheck: function() { /* do something... */ },
+	onUncheck: function() { /* do something... */ },
+	onDisabled: function() { /* do something... */ },
+	onEnabled: function() { /* do something... */ }
+});    
+/*** end of tinytoggle ***/
 
 $( document ).ready(function() {
+	console.log("Hello world!"); 
 	console.log( "ready!" );
 });

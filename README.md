@@ -5,6 +5,9 @@ https://pkgstore.datahub.io/core/world-cities/world-cities_csv/data/6cc66692f0e8
 https://pkgstore.datahub.io/core/world-cities/world-cities_json/data/5b3dd46ad10990bca47b04b4739a02ba/world-cities_json.json
 
 ##Design
+timeline idea for infromation architecture, overlay 2 timelinejs with their controls on top of the map to control 1) tags to plot, 2)timeline of activity, months, years, etc. both controled by up,down,left,right arrow keys making viewing all the info easy while also discoverable. on each timeline stop, the map will bound to a specific view of the city. timelines are zoomable and can be signified by fontawesome icons as a visual identification of the cateogry of data instead of words.
+
+
 jquery toggle cool design simple of toggle for each dataset and a description
 display bounds for each toggle and intersecting toggle bounds.
 
