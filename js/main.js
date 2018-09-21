@@ -57,7 +57,7 @@ var options = {
 				"</br>" + 
 				"<b>" + value + 
 				"</b>" + 
-				", " + 
+				", </br>" + 
 				item.subcountry + 
 				", " +
 				item.country +

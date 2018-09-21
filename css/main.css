@@ -93,7 +93,7 @@ input.searchbar {
 	z-index:300000000 !important;
 	font-style: normal !important;
 	font-family: 'Comfortaa', cursive !important;
-	font-size: 25px !important;	
+	font-size: 22px !important;	
 	opacity: 0.95 !important;
 	width: 95% !important;
 	text-align: left;
@@ -129,7 +129,7 @@ hr{
 .flag
 {
 	position:relative;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
