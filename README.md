@@ -33,4 +33,10 @@ TODO
 - make tagging of data functionality, each tag must have its own geojson. tags should follow the following scheme keyword1:keyword2 where keyword1 is chosen as a start based on aplphaptical order. This should handle the information architecture.
 - make a functionality for showing differnt map tiles. so the basic tile is blackandwhite tile but there should be a photogallery overlay on top of the blackandwhite map showing different tiles in a photogallery autoplay manner. slickslider.js
 - Add everything javascript inside the $.ready thing. 
-- use geoid to build server-side and client side databases. 
+- use geoid to build server-side and client side databases.
+- add a minimap to compansate for the smallarea of map https://codepen.io/jonvadillo/pen/BKMdKx
+- show different info layers https://github.com/jieter/leaflet.layerscontrol-minimap
+- after searchbox selection, map gets the focus so user can use arrows to navigate it.
+- implement geolocation on serverside or clientside.
+- favicon of a rectangle black
+- fisheye vertical infinite listitem  
