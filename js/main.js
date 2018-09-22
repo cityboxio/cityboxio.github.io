@@ -29,7 +29,7 @@ var options = {
 		sort: {
 			enabled: true 
 		},
-		maxNumberOfElements: 5,
+		maxNumberOfElements: 6,
 
 		showAnimation: {
 			type: "slide",
@@ -63,7 +63,7 @@ var options = {
 				item.country +
 				'<img src="img/flags/'+ 
 				findFlag(item.country).toLowerCase() +
-				'.svg" alt="flag" style="width: 40px; height: 20; float: right;" class="flag">'+
+				'.svg" alt="" style="width: 40px; height: 20; float: right;" class="flag">'+
 				"</br>" +
 				"</br>" +
 				"</br>"  
