@@ -36,12 +36,14 @@ margin-bottom: 40px;
 		position: relative;
 		margin-left: 0px;
 	}
-	.left{float:left;width:100px;}
-	.right{float:right;width:200px;}
+	.container{
+		margin-top: 100px;
+		width:20%;
+	}
+
 	.slider{
 		font-size: 22px !important;
 		height: 40px;	
-		width: 500px;	
 		list-style: none;
 		text-align: center;
 		padding: 0px;
@@ -53,43 +55,49 @@ margin-bottom: 40px;
 		align-content: center;
 	}
 	.slider1{
+		float:left;
+		width:50%;
 	}
 	.slider2{
+		float:right;
+		width:50%;
 	}
-
 		</style>
 	</head>
 	<body>
 		<h1>
-		<div id="nodi"> hello </div>
+			<div id="nodi"> hello </div>
 		</h1>
-		<div class="slider slider1 right">
-			<div>
-				<i class="fas fa-plus icon"></i> </br>
-			</div>
-			<div>
-				<i class="fas fa-fighter-jet icon"></i> 
-			</div>
-			<div>
-				<i class="fas fa-flask icon"></i> 
-			</div>
-			<div>
-				<i class="fas fa-bicycle icon"></i> 
-			</div>
-		</div>
 		</br>
-		<div class="slider slider2 right">
-			<div>
-				<i class="fas fa-plus icon"></i> 
+		<div class="container">
+			<div class="slider slider1">
+				<div>
+					<i class="fas fa-plus icon"></i> </br>
+				</div>
+				<div>
+					<i class="fas fa-fighter-jet icon"></i> 
+				</div>
+				<div>
+					<i class="fas fa-flask icon"></i> 
+				</div>
+				<div>
+					<i class="fas fa-bicycle icon"></i> 
+				</div>
 			</div>
-			<div>
-				<i class="fas fa-fighter-jet icon"></i> 
-			</div>
-			<div>
-				<i class="fas fa-flask icon"></i> 
-			</div>
-			<div>
-				<i class="fas fa-bicycle icon"></i> 
+			</br>
+			<div class="slider slider2">
+				<div>
+					<i class="fas fa-plus icon"></i> 
+				</div>
+				<div>
+					<i class="fas fa-fighter-jet icon"></i> 
+				</div>
+				<div>
+					<i class="fas fa-flask icon"></i> 
+				</div>
+				<div>
+					<i class="fas fa-bicycle icon"></i> 
+				</div>
 			</div>
 		</div>
 
@@ -152,6 +160,8 @@ margin-bottom: 40px;
 				//fade: true,
 				focusOnSelect: true,
 				vertical: true,
+				verticalSwiping: true,
+				waitForAnimate: true,
 				centerMode: true	
 			});
 			$('.slider2').slick({
