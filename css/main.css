@@ -53,6 +53,11 @@ height: 80% !important;
 }
 .leaflet-touch .leaflet-control-zoom-out {
 }
+/*
+.leaflet-control-zoom.leaflet-bar.leaflet-control > a {
+float: right;
+}
+ */
 /* 2col header */
 .parent {
 	display: flex;
