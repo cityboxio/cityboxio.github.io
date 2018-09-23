@@ -1,0 +1,115 @@
+
+<html>
+	<head>
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+		<style>
+body {
+	margin: 40px;
+}
+
+.dock {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0px;
+}
+.dock img {
+	width: 50px;
+	height: 50px;
+	margin: 0;
+}
+.dock li {
+	transition: all 0.5s ease-out;
+	width: 50px;
+	height: 50px;
+	/*
+	 */
+	margin: 10px;
+	display:block;
+	padding: 0px;
+	position: relative;
+	top: 0;
+	font-size: 32px;
+}
+.dock li:hover {
+	transform: scale(2);
+	/*
+margin: 10px;
+margin-top: 40px;
+margin-bottom: 40px;
+position: relative;
+	 */
+	margin-left: 10px;
+}
+	.fas{
+		cursor: pointer
+	}
+		</style>
+	</head>
+	<body>
+		</br>
+		</br>
+		</br>
+
+		<hr>
+		<ul class="dock">
+			<li>
+				<a class="icon">
+					<i class="fas fa-plus"></i>
+				</a>
+			</li>
+			<li>
+				<i class="fas fa-fighter-jet"></i>
+			</li>
+			<li id="ds1">
+				<i class="fas fa-flask"></i>
+			</li>
+			<li>
+				<i class="fas fa-bicycle"></i>
+			</li>
+			<li>
+				<i id="toggle-click" class="fas fa-glass-martini"></i>
+			</li>
+			<li>
+				<i class="far fa-building"></i>
+			</li>
+		</ul>
+<!--
+		<div id="toggle-click" style="margin: 10px auto; width: 200px; padding: 30px 0; cursor: pointer; background-color: red; text-align: center;">Toggle Click</div>
+-->
+		</body>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$( document ).ready( function() {      
+			//$('.icon').click(function({
+			//$(this).find('i').toggleClass('fa-plus fa-2x fa-minus fa-2x');
+			//console.log("clicked");
+			//});
+			console.log("document ready");
+
+			//$(".fas").toggle(
+			//	function() {
+			//		console.log( "First handler for .toggle() called." );
+			//	}, function() {
+			//		console.log( "Second handler for .toggle() called." );
+			//	}
+			//);
+	
+		
+			$('#toggle-click').on('click',function(){
+
+				if($(this).attr('data-click-state') == 1) {
+					$(this).attr('data-click-state', 0)
+					$(this).css('color', 'red')
+				} else {
+					$(this).attr('data-click-state', 1)
+					$(this).css('color', 'orange')
+				}
+
+			});
+
+		});
+
+	</script>
+</html>
