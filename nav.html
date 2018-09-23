@@ -50,7 +50,6 @@ position: relative;
 		*/
 		text-shadow: 3px 3px 16px black;
 		opacity: 0.7;
-
 	}
 
 
@@ -67,15 +66,16 @@ position: relative;
 
 	.wrap-container {
 		position: relative;
-		max-height: 200px;
+		max-height: 600px;
 		width: 100%;
-		max-width: 100%;
+		max-width: 10%;
 		margin: auto;
 		/* background: #eee; */
 		overflow: auto;
 		padding-right: 20px;
 		mask: url(#masking);
 		-webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, black), color-stop(1, rgba(0, 0, 0, 0)));
+		overflow-y: scroll;	
 	}
 	.wrap-container ul {
 		list-style: none;
@@ -84,8 +84,8 @@ position: relative;
 		top: 50px;
 	}
 	.wrap-container ul, .wrap-container ul li {
-		margin: 0;
-		padding: 0;
+		margin: 30px;
+		padding: 10px;
 		text-align: center;
 	}
 	.wrap-container ul li {
@@ -110,33 +110,31 @@ position: relative;
 		</style>
 	</head>
 	<body>
-		</br>
-		</br>
-		</br>
+		<div id="scroll-container">
+		<div class="wrap-container">
+			<ul id="ul-scroll" class="dock">
+				<li>
+					<i class="fas fa-plus icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-fighter-jet icon"></i>
+				</li>
+				<li id="ds1">
+					<i class="fas fa-flask icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-bicycle icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-glass-martini icon"></i>
+				</li>
+				<li>
+					<i class="far fa-building icon"></i>
+				</li>
+			</ul>
+		</div>
+		</div>
 
-		<hr>
-		<ul class="dock">
-			<li>
-				<i class="fas fa-plus icon"></i>
-			</li>
-			<li>
-				<i class="fas fa-fighter-jet icon"></i>
-			</li>
-			<li id="ds1">
-				<i class="fas fa-flask icon"></i>
-			</li>
-			<li>
-				<i class="fas fa-bicycle icon"></i>
-			</li>
-			<li>
-				<i class="fas fa-glass-martini icon"></i>
-			</li>
-			<li>
-				<i class="far fa-building icon"></i>
-			</li>
-		</ul>
-
-	
 		<div id="scroll-container">
 			<div class="wrap-container" id="wrap-scroll">
 				<ul id="ul-scroll">
@@ -235,6 +233,7 @@ position: relative;
 				if($(this).attr('data-click-state') == 1) {
 					$(this).attr('data-click-state', 0)
 					$(this).css('color', 'red')
+					$(this).css('text-shadow', '3px 3px 16px red')
 				} else {
 					$(this).attr('data-click-state', 1)
 					$(this).css('color', 'green')
@@ -243,7 +242,7 @@ position: relative;
 
 			});
 
-
+/*
 			var scrollW = document.getElementById("wrap-scroll");
 			var scrollUl = document.getElementById("ul-scroll");
 			var itemsScrolled,
@@ -314,7 +313,7 @@ position: relative;
 				initItems();
 				scrollW.onscroll = scrollWrap;
 			});
-
+*/
 		});
 
 	</script>
