@@ -5,8 +5,8 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-		
-<style>
+
+		<style>
 
 body {
 	margin: 40px;
@@ -14,8 +14,8 @@ body {
 }
 
 .fas{
-		cursor: pointer
-	}
+	cursor: pointer
+}
 
 	.icon{
 		/* text-shadow: 1px 1px 1px #ccc;
@@ -27,7 +27,7 @@ body {
 		transition: all 0.1s ease-out;
 	}
 	.icon:hover {
-		transform: scale(2);
+		transform: scale(1.5);
 		/*
 margin: 10px;
 margin-top: 40px;
@@ -36,10 +36,12 @@ margin-bottom: 40px;
 		position: relative;
 		margin-left: 0px;
 	}
-
-	.slider1{
+	.left{float:left;width:100px;}
+	.right{float:right;width:200px;}
+	.slider{
 		font-size: 22px !important;
 		height: 40px;	
+		width: 500px;	
 		list-style: none;
 		text-align: center;
 		padding: 0px;
@@ -49,65 +51,55 @@ margin-bottom: 40px;
 		flex-wrap: wrap;
 		-webkit-align-content: center;
 		align-content: center;
-
+	}
+	.slider1{
 	}
 	.slider2{
-		font-size: 22px !important;
-		height: 40px;	
-		list-style: none;
-		text-align: center;
-		padding: 0px;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-wrap: wrap;
-		flex-wrap: wrap;
-		-webkit-align-content: center;
-		align-content: center;
-
 	}
 
-</style>
+		</style>
 	</head>
 	<body>
-		<div class="slider1">
+		<h1>
+		<div id="nodi"> hello </div>
+		</h1>
+		<div class="slider slider1 right">
 			<div>
 				<i class="fas fa-plus icon"></i> </br>
-				hack1
 			</div>
 			<div>
-				<i class="fas fa-fighter-jet icon"></i> hack2
+				<i class="fas fa-fighter-jet icon"></i> 
 			</div>
 			<div>
-				<i class="fas fa-flask icon"></i> hack3
+				<i class="fas fa-flask icon"></i> 
 			</div>
 			<div>
-				<i class="fas fa-bicycle icon"></i> hack4
+				<i class="fas fa-bicycle icon"></i> 
 			</div>
 		</div>
-	
-			<div class="slider2">
+		</br>
+		<div class="slider slider2 right">
 			<div>
-				<i class="fas fa-plus icon"></i> hack1
+				<i class="fas fa-plus icon"></i> 
 			</div>
 			<div>
-				<i class="fas fa-fighter-jet icon"></i> hack2
+				<i class="fas fa-fighter-jet icon"></i> 
 			</div>
 			<div>
-				<i class="fas fa-flask icon"></i> hack3
+				<i class="fas fa-flask icon"></i> 
 			</div>
 			<div>
-				<i class="fas fa-bicycle icon"></i> hack4
+				<i class="fas fa-bicycle icon"></i> 
 			</div>
 		</div>
 
-		
+
 		<!--	
 	  <div>
 	  <i class="fas fa-angle-up arrows"></i>	
 	  <i class="fas fa-angle-down arrows"></i>
 	  </div>
 
-	  <div id="nodi"> hello </div>
 		-->
 	</body>
 	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
@@ -135,42 +127,31 @@ margin-bottom: 40px;
 				}
 			});
 			/* can be used to show info about the icon */
-			$( ".icon" ).hover(
-				function() {
-					// show 2nd slider
-					$(".slider2").show();
-					//$( this.parent ).append( $( '<div style="font-size: 12px"> <span> cycling </span> </div>' ) );
-					//$( this ).find("span").css( "font-size", "12px" );	
-					//$( this ).find("span").css( "margin", "12px" );	
-				}, function() {
-					// hide 2nd slider
-					$(".slider2").hide() //;find( "span:last" ).remove();
-				}
-			);
-
-			var div = $('#wrap'),
-				wrapHeight = div.height(),
-				listHeight = div.find('ul').outerHeight();
-
-			div.on('mousemove',
-				function(e){
-					var cPointY = e.pageY,
-						cST = div.scrollTop();
-					if (cPointY >= (wrapHeight/2)) {
-						div.scrollTop(cST + 5);
+				$( ".icon" ).hover(
+					function() {
+						// show 2nd slider
+						$(".slider2").show();
+						//$( this.parent ).append( $( '<div style="font-size: 12px"> <span> cycling </span> </div>' ) );
+						//$( this ).find("span").css( "font-size", "12px" );	
+						//$( this ).find("span").css( "margin", "12px" );	
+					}, function() {
+						// hide 2nd slider
+						$(".slider2").hide() //;find( "span:last" ).remove();
 					}
-					else {
-						div.scrollTop(cST - 5);
-					}
-				});
-		
-	
+				);
+
+
 			$('.slider1').slick({
 				infinite: true,
 				slidesToShow: 3,
 				adaptiveHeight: true,
 				slidesToScroll: 3,
 				//rows: 3,
+				autoplaySpeed: 3000,
+				autoplay: true,
+				//fade: true,
+				focusOnSelect: true,
+				vertical: true,
 				centerMode: true	
 			});
 			$('.slider2').slick({
@@ -179,6 +160,9 @@ margin-bottom: 40px;
 				adaptiveHeight: true,
 				slidesToScroll: 3,
 				//rows: 3,
+				autoplaySpeed: 3000,
+				autoplay: true,
+				vertical: true,
 				centerMode: true	
 			});
 
