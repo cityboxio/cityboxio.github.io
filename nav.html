@@ -7,6 +7,7 @@
 		<style>
 body {
 	margin: 40px;
+	background-color: white;
 }
 
 .dock {
@@ -40,86 +41,109 @@ margin-top: 40px;
 margin-bottom: 40px;
 position: relative;
 	 */
-	margin-left: 10px;
+	margin-left: 20px;
 }
 	.fas{
 		cursor: pointer
 	}
+
 	.icon{
 		/* text-shadow: 1px 1px 1px #ccc;
-		*/
-		text-shadow: 3px 3px 16px black;
+		 */
+		text-shadow: 3px 3px 5px black;
 		opacity: 0.7;
 	}
 
+	.left {
+		width: 400px;
+		float: right;
+	}
+	.right {
+		margin: 400px;
+		float: left;
+		/* Change this to whatever the width of your left column is*/
+	}
 
-
-	#scroll-container {
+	#wrap {
+		width: 200px;
+		height: 500px;
+		border-radius: 1em;
+		margin: 1em auto 0 auto;
 		overflow: hidden;
-		max-width: 100%;
-		margin: auto;
-		height: 50vh;
-		top: 25vh;
-		position: relative;
-		min-height: 200px;
-	}
-
-	.wrap-container {
-		position: relative;
-		max-height: 600px;
-		width: 100%;
-		max-width: 10%;
-		margin: auto;
-		/* background: #eee; */
-		overflow: auto;
-		padding-right: 20px;
-		mask: url(#masking);
-		-webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, black), color-stop(1, rgba(0, 0, 0, 0)));
-		overflow-y: scroll;	
-	}
-	.wrap-container ul {
-		list-style: none;
-		position: relative;
-		transition: transform .3s;
-		top: 50px;
-	}
-	.wrap-container ul, .wrap-container ul li {
-		margin: 30px;
-		padding: 10px;
-		text-align: center;
-	}
-	.wrap-container ul li {
-		height: 50px;
-		line-height: 50px;
-		transition: transform .3s;
-		overflow: hidden;
-	}
-	.wrap-container ul li:last-of-type {
-		padding-bottom: 50px;
-	}
-	.wrap-container ul li.active .item {
-		transform: scale(1.9);
-	}
-	.wrap-container ul li .item {
-		position: relative;
-		transition: transform 200ms;
-		display: inline-block;
-	}
+		/* 
+		background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); 
+		 */
+		background: linear-gradient(to right, white, rgba(0, 0, 0, 0)); 
 
 
+	}
 		</style>
 	</head>
 	<body>
-		<div id="scroll-container">
-		<div class="wrap-container">
-			<ul id="ul-scroll" class="dock">
+
+		<div id="wrap">
+			<ul class="dock">
+				<li>
+					<i class="fas fa-plus icon"></i> 
+				</li>
+				<li>
+					<i class="fas fa-fighter-jet icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-flask icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-bicycle icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-glass-martini icon"></i>
+				</li>
+				<li>
+					<i class="far fa-building icon"></i>
+				</li>
 				<li>
 					<i class="fas fa-plus icon"></i>
 				</li>
 				<li>
 					<i class="fas fa-fighter-jet icon"></i>
 				</li>
-				<li id="ds1">
+				<li>
+					<i class="fas fa-flask icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-bicycle icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-glass-martini icon"></i>
+				</li>
+				<li>
+					<i class="far fa-building icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-plus icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-fighter-jet icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-flask icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-bicycle icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-glass-martini icon"></i>
+				</li>
+				<li>
+					<i class="far fa-building icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-plus icon"></i>
+				</li>
+				<li>
+					<i class="fas fa-fighter-jet icon"></i>
+				</li>
+				<li>
 					<i class="fas fa-flask icon"></i>
 				</li>
 				<li>
@@ -133,187 +157,58 @@ position: relative;
 				</li>
 			</ul>
 		</div>
-		</div>
-
-		<div id="scroll-container">
-			<div class="wrap-container" id="wrap-scroll">
-				<ul id="ul-scroll">
-					<li class="active">
-						<span class="item">
-							Item one
-						</span>
-					</li>
-					<li>
-						<span class="item">
-							Item two
-						</span>
-					</li>
-					<li>
-						<span class="item">
-							Item three
-						</span>
-					</li>
-					<li>
-						<span class="item">
-							Item four
-						</span>
-					</li>
-					<li>
-						<span class="item">
-							Item five
-						</span>
-					</li>
-					<li>
-						<span class="item">
-							Item six
-						</span>
-					</li>
-					<li>
-						<span class="item">
-							Item seven
-						</span>
-					</li>
-					<li>
-						<span class="item">
-							Item eight
-						</span>
-					</li>
-					<li>
-						<span class="item">
-							Item nine
-						</span>
-					</li>
-					<li>
-						<span class="item">
-							Item ten
-						</span>
-					</li>
-					<li>
-						<span class="item">
-							Item eleven
-						</span>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<svg>
-			<defs>
-			<linearGradient id="gradient" x1="0" y1="0%" x2 ="0" y2="50%">
-			<stop stop-color="black" offset="0"/>
-			<stop stop-color="white" offset="1"/>
-			</linearGradient>
-
-			<mask id="masking" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
-			<rect y="0" width="1" height="1" fill="url(#gradient)" />
-			</mask>
-			</defs>
-		</svg>
 
 	</body>
 	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$( document ).ready( function() {      
-			//$('.icon').click(function({
-			//$(this).find('i').toggleClass('fa-plus fa-2x fa-minus fa-2x');
-			//console.log("clicked");
-			//});
 			console.log("document ready");
-
-			//$(".fas").toggle(
-			//	function() {
-			//		console.log( "First handler for .toggle() called." );
-			//	}, function() {
-			//		console.log( "Second handler for .toggle() called." );
-			//	}
-			//);
-	
-		
 			$('.icon').on('click',function(){
-
 				if($(this).attr('data-click-state') == 1) {
 					$(this).attr('data-click-state', 0)
 					$(this).css('color', 'red')
 					$(this).css('text-shadow', '3px 3px 16px red')
-				} else {
+				} else if ($(this).attr('data-click-state') == 2) {
 					$(this).attr('data-click-state', 1)
+					$(this).css('color', 'orange')
+					$(this).css('text-shadow', '3px 3px 16px orange')
+				} else if ($(this).attr('data-click-state') == 3) {
+					$(this).attr('data-click-state', 2)
+					$(this).css('color', 'blue')
+					$(this).css('text-shadow', '3px 3px 16px blue')
+				} else {
+					$(this).attr('data-click-state', 3)
 					$(this).css('color', 'green')
 					$(this).css('text-shadow', '3px 3px 16px green')
 				}
-
 			});
-
-/*
-			var scrollW = document.getElementById("wrap-scroll");
-			var scrollUl = document.getElementById("ul-scroll");
-			var itemsScrolled,
-				itemsMax,
-				cloned = false;
-
-			var listOpts = {
-				itemCount: null,
-				itemHeight: null,
-				items: [],
-			};
-
-			function scrollWrap () {
-
-				itemsScrolled = Math.ceil( (this.scrollTop + listOpts.itemHeight / 2 ) / listOpts.itemHeight);
-
-				if (this.scrollTop < 1) {
-					itemsScrolled = 0;
+			/* can be used to show info about the icon */
+			$( "li" ).hover(
+				function() {
+					//$( this.parent ).append( $( '<div style="font-size: 12px"> <span> cycling </span> </div>' ) );
+					$( this ).append( $( ' <span> cycling </span> ' ) );
+					//$( this ).find("span").css( "font-size", "12px" );	
+					//$( this ).find("span").css( "margin", "12px" );	
+				}, function() {
+					$( this ).find( "span:last" ).remove();
 				}
+			);
 
-				listOpts.items.forEach(function (ele) {
-					ele.classList.remove("active");
-				})
+			var div = $('#wrap'),
+				wrapHeight = div.height(),
+				listHeight = div.find('ul').outerHeight();
 
-				if (itemsScrolled < listOpts.items.length) {
-					listOpts.items[itemsScrolled].classList.add("active");
-				}
-
-				if (itemsScrolled > listOpts.items.length - 3) {
-
-					var node;
-					for ( _x = 0; _x <= itemsMax - 1; _x++ ) {
-
-						node = listOpts.items[_x];
-
-						if ( !cloned ) {
-							node = listOpts.items[_x].cloneNode(true);
-						}
-
-						scrollUl.appendChild(node);
+			div.on('mousemove',
+				function(e){
+					var cPointY = e.pageY,
+						cST = div.scrollTop();
+					if (cPointY >= (wrapHeight/2)) {
+						div.scrollTop(cST + 5);
 					}
-
-					initItems(cloned);
-					cloned = true; 
-					itemsScrolled = 0;
-
-				}
-			}
-
-			function initItems (scrollSmooth) {
-
-				listOpts.items = [].slice.call(scrollUl.querySelectorAll("li"));
-				listOpts.itemHeight = listOpts.items[0].clientHeight;
-				listOpts.itemCount = listOpts.items.length;
-
-				if (!itemsMax) {
-					itemsMax = listOpts.itemCount;
-				}
-
-				if (scrollSmooth) {
-					var seamLessScrollPoint = ((itemsMax - 3) * listOpts.itemHeight);
-					scrollW.scrollTop = seamLessScrollPoint;
-				}      
-
-			}
-
-			document.addEventListener("DOMContentLoaded", function(event) {
-				initItems();
-				scrollW.onscroll = scrollWrap;
-			});
-*/
+					else {
+						div.scrollTop(cST - 5);
+					}
+				});
 		});
 
 	</script>
