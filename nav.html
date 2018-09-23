@@ -3,163 +3,115 @@
 	<head>
 
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+		
+<style>
 
-		<style>
 body {
 	margin: 40px;
 	background-color: white;
 }
 
-.dock {
-	list-style: none;
-	margin: 0 auto;
-	padding: 0px;
-}
-.dock img {
-	width: 50px;
-	height: 50px;
-	margin: 0;
-}
-.dock li {
-	transition: all 0.5s ease-out;
-	width: 50px;
-	height: 50px;
-	/*
-	 */
-	margin: 10px;
-	display:block;
-	padding: 0px;
-	position: relative;
-	top: 0;
-	font-size: 32px;
-}
-.dock li:hover {
-	transform: scale(2);
-	/*
-margin: 10px;
-margin-top: 40px;
-margin-bottom: 40px;
-position: relative;
-	 */
-	margin-left: 20px;
-}
-	.fas{
+.fas{
 		cursor: pointer
 	}
 
 	.icon{
 		/* text-shadow: 1px 1px 1px #ccc;
 		 */
+		font-size: 32px;	
 		text-shadow: 3px 3px 5px black;
 		opacity: 0.7;
+		padding: 20px;
+		transition: all 0.1s ease-out;
 	}
-
-	.left {
-		width: 400px;
-		float: right;
-	}
-	.right {
-		margin: 400px;
-		float: left;
-		/* Change this to whatever the width of your left column is*/
-	}
-
-	#wrap {
-		width: 200px;
-		height: 500px;
-		border-radius: 1em;
-		margin: 1em auto 0 auto;
-		overflow: hidden;
-		/* 
-		background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); 
+	.icon:hover {
+		transform: scale(2);
+		/*
+margin: 10px;
+margin-top: 40px;
+margin-bottom: 40px;
 		 */
-		background: linear-gradient(to right, white, rgba(0, 0, 0, 0)); 
+		position: relative;
+		margin-left: 0px;
+	}
 
+	.slider1{
+		font-size: 22px !important;
+		height: 40px;	
+		list-style: none;
+		text-align: center;
+		padding: 0px;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-align-content: center;
+		align-content: center;
 
 	}
-		</style>
+	.slider2{
+		font-size: 22px !important;
+		height: 40px;	
+		list-style: none;
+		text-align: center;
+		padding: 0px;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-align-content: center;
+		align-content: center;
+
+	}
+
+</style>
 	</head>
 	<body>
-
-		<div id="wrap">
-			<ul class="dock">
-				<li>
-					<i class="fas fa-plus icon"></i> 
-				</li>
-				<li>
-					<i class="fas fa-fighter-jet icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-flask icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-bicycle icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-glass-martini icon"></i>
-				</li>
-				<li>
-					<i class="far fa-building icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-plus icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-fighter-jet icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-flask icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-bicycle icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-glass-martini icon"></i>
-				</li>
-				<li>
-					<i class="far fa-building icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-plus icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-fighter-jet icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-flask icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-bicycle icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-glass-martini icon"></i>
-				</li>
-				<li>
-					<i class="far fa-building icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-plus icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-fighter-jet icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-flask icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-bicycle icon"></i>
-				</li>
-				<li>
-					<i class="fas fa-glass-martini icon"></i>
-				</li>
-				<li>
-					<i class="far fa-building icon"></i>
-				</li>
-			</ul>
+		<div class="slider1">
+			<div>
+				<i class="fas fa-plus icon"></i> </br>
+				hack1
+			</div>
+			<div>
+				<i class="fas fa-fighter-jet icon"></i> hack2
+			</div>
+			<div>
+				<i class="fas fa-flask icon"></i> hack3
+			</div>
+			<div>
+				<i class="fas fa-bicycle icon"></i> hack4
+			</div>
+		</div>
+	
+			<div class="slider2">
+			<div>
+				<i class="fas fa-plus icon"></i> hack1
+			</div>
+			<div>
+				<i class="fas fa-fighter-jet icon"></i> hack2
+			</div>
+			<div>
+				<i class="fas fa-flask icon"></i> hack3
+			</div>
+			<div>
+				<i class="fas fa-bicycle icon"></i> hack4
+			</div>
 		</div>
 
+		
+		<!--	
+	  <div>
+	  <i class="fas fa-angle-up arrows"></i>	
+	  <i class="fas fa-angle-down arrows"></i>
+	  </div>
+
+	  <div id="nodi"> hello </div>
+		-->
 	</body>
 	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript">
 		$( document ).ready( function() {      
 			console.log("document ready");
@@ -183,14 +135,16 @@ position: relative;
 				}
 			});
 			/* can be used to show info about the icon */
-			$( "li" ).hover(
+			$( ".icon" ).hover(
 				function() {
+					// show 2nd slider
+					$(".slider2").show();
 					//$( this.parent ).append( $( '<div style="font-size: 12px"> <span> cycling </span> </div>' ) );
-					$( this ).append( $( ' <span> cycling </span> ' ) );
 					//$( this ).find("span").css( "font-size", "12px" );	
 					//$( this ).find("span").css( "margin", "12px" );	
 				}, function() {
-					$( this ).find( "span:last" ).remove();
+					// hide 2nd slider
+					$(".slider2").hide() //;find( "span:last" ).remove();
 				}
 			);
 
@@ -209,6 +163,25 @@ position: relative;
 						div.scrollTop(cST - 5);
 					}
 				});
+		
+	
+			$('.slider1').slick({
+				infinite: true,
+				slidesToShow: 3,
+				adaptiveHeight: true,
+				slidesToScroll: 3,
+				//rows: 3,
+				centerMode: true	
+			});
+			$('.slider2').slick({
+				infinite: true,
+				slidesToShow: 3,
+				adaptiveHeight: true,
+				slidesToScroll: 3,
+				//rows: 3,
+				centerMode: true	
+			});
+
 		});
 
 	</script>
