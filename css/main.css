@@ -41,6 +41,18 @@ height: 80% !important;
 	transition:.6s all ease-in;
 }
 
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+
+}
+.leaflet-control-zoom-out {
+}
+
+.leaflet-touch .leaflet-control-zoom-in {
+}
+.leaflet-touch .leaflet-control-zoom-out {
+}
 /* 2col header */
 .parent {
 	display: flex;

@@ -79,13 +79,28 @@ var options = {
 };
 
 $("#categories-basic").easyAutocomplete(options);
+/**************************/
 /*** end of autosuggest ***/
+/**************************/
 
+/********************/
 /*** start of map ***/
+/********************/
 
-var map = L.map('map').setView(
+//var map = L.map('map', {drawControl: true}).setView(
+var map = L.map('map',{zoomControl: false}).setView(
 	[31.205753, 29.924526], 
 	8); // alexandria
+
+//var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+//var osmAttrib='Map data &copy; OpenStreetMap contributors';
+//var osm = new L.TileLayer(osmUrl, {minZoom: 5, maxZoom: 18, attribution: osmAttrib});
+//map.addLayer(osm);
+//map.setView(new L.LatLng(59.92448055859924, 10.758276373601069),10);
+//Plugin magic goes here! Note that you cannot use the same layer object again, as that will confuse the two map controls
+//var osm2 = new L.TileLayer(osmUrl, {minZoom: 0, maxZoom: 13, attribution: osmAttrib });
+//var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
+
 
 //var myLayer = L.geoJSON().addTo(map);
 //myLayer.addData(geojsonFeature);
@@ -97,7 +112,6 @@ var citiesLayer = new L.geoJSON().addTo(map);
 citiesLayer.addData(geocities);
 
 
-
 mapLink='<a href="https://www.citybox.io/copyright">citybox.io</a>';
 wholink='';
 //L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
@@ -106,15 +120,30 @@ wholink='';
 //L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
 //L.tileLayer('http://b.tile.stamen.com/toner-hybrid/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
 //L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
-L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
+blackwhite='http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png';
+osm=L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
 //L.tileLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
+
+//var osm2 = new L.TileLayer(blackwhite, {minZoom: 0, maxZoom: 13, attribution: "blah"}).addTo(map);
+//var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
+
+var osmAttrib='Map data &copy; OpenStreetMap contributors';
+var osm2 = new L.TileLayer(blackwhite, {minZoom: 0, maxZoom: 13, attribution: osmAttrib });
+var miniMap= new L.Control.MiniMap(osm2, { toggleDisplay: true, position: 'topleft' }).addTo(map);
+
+L.control.zoom({
+	position:'topleft'
+}).addTo(map);
 
 // 
 // mapLink = 
 // '<a href="http://www.esri.com/">Esri</a>';
 // wholink = 
 // 	'i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
+
+/******************/
 /*** end of map ***/
+/******************/
 
 /*** start of typed.js ***/
 var typed = new Typed('#typed', {
@@ -152,6 +181,7 @@ $("#datasource_c").tinyToggle({
 	onEnabled: function() { /* do something... */ }
 });    
 /*** end of tinytoggle ***/
+
 
 $( document ).ready(function() {
 	console.log( "ready!" );
