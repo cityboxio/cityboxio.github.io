@@ -44,7 +44,7 @@ height: 80% !important;
 
 .leaflet-control-zoom-in,
 .leaflet-control-zoom-out {
-
+	padding: 5px;
 }
 .leaflet-control-zoom-out {
 }
