@@ -136,7 +136,7 @@ var rect2 = {color: "grey", weight: 1, opacity:0, fillOpacity:0};
 var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true, aimingRectOptions : rect1, shadowRectOptions: rect2, position: 'bottomright'}).addTo(map);
 
 L.control.zoom({
-	position:'topright'
+	position:'bottomright'
 }).addTo(map);
 
 // 
