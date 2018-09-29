@@ -1,16 +1,18 @@
-
 <html>
 	<head>
 
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="css/normalize.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
 
 		<style>
-
 body {
-	margin: 40px;
-	background-color: white;
+	/*
+margin: 40px;
+	 */
+background-color: pink;
 }
 
 .fas{
@@ -32,87 +34,142 @@ body {
 margin: 10px;
 margin-top: 40px;
 margin-bottom: 40px;
+position: relative;
+margin-left: 0px;
 		 */
-		position: relative;
-		margin-left: 0px;
 	}
 	.container{
-		margin-top: 100px;
+		align-content: center !important;
 		width:20%;
+		/*
+		   margin-top: 100px;
+		 */
 	}
 
 	.slider{
 		font-size: 22px !important;
-		height: 40px;	
 		list-style: none;
 		text-align: center;
 		padding: 0px;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-wrap: wrap;
-		flex-wrap: wrap;
-		-webkit-align-content: center;
-		align-content: center;
+		/*	
+height: 40px;	
+display: -webkit-flex;
+display: flex;
+-webkit-flex-wrap: wrap;
+flex-wrap: wrap;
+-webkit-align-content: center;
+align-content: center;
+		 */
 	}
 	.slider1{
-		float:left;
-		width:50%;
+		/*
+float:left;
+width:50%;
+		 */
 	}
 	.slider2{
-		float:right;
+		/*
+float:right;
 		width:50%;
+		 */
 	}
 	.arrows{
 		font-size: 32px;
+		text-align: center;
+		/*	
+			margin-right: 80px;
+		 */
 	}
+
+	.sliderfade:before{
+		background: radial-gradient(farthest-corner at center, transparent, green 75%);
+	}
+
 		</style>
 	</head>
 	<body>
-	  <div>
-	  <i id="slider1down" class="fas fa-angle-down arrows"></i>
-	  </div>
-
-		<h1>
-			<div id="nodi"> hello </div>
-		</h1>
-		</br>
-			<i id="slider1up" class="fas fa-angle-up arrows"></i>	
+		<!-- .container is main centered wrapper -->
 		<div class="container">
-			<div class="slider slider1">
-				<div>
-					<i class="fas fa-plus icon"></i> 
+			<!-- columns should be the immediate child of a .row -->
+			<div class="row">
+				<div class="six columns">
+					<div class="fourth columns arrows">
+						<i id="slider1up" class="fas fa-angle-up arrows"></i>
+					</div>
 				</div>
-				<div>
-					<i class="fas fa-fighter-jet icon"></i> 
-				</div>
-				<div>
-					<i class="fas fa-flask icon"></i> 
-				</div>
-				<div>
-					<i class="fas fa-bicycle icon"></i> 
+				<div class="six columns">
+					<div class="fourth columns arrows">
+						<i id="slider2up" class="fas fa-angle-up arrows"></i>
+					</div>
 				</div>
 			</div>
-			</br>
-			<div class="slider slider2">
-				<div>
-					<i class="fas fa-plus icon"></i> 
+			<!-- just use a number and class 'column' or 'columns' -->
+			<div class="row">
+				<div class="six columns">
+					<div class="fourth columns sliderfade">
+						<div class="slider slider1">
+							<div>
+								<h6>worldbank</h6>
+							</div>
+							<div>
+								<i class="fas fa-plus icon"></i> 
+							</div>
+							<div>
+								<i class="fas fa-fighter-jet icon"></i> 
+							</div>
+							<div>
+								<i class="fas fa-flask icon"></i> 
+							</div>
+							<div>
+								<i class="fas fa-bicycle icon"></i> 
+							</div>
+							<div>
+								<h6> Net bilateral aid flows from DAC donors </h6> 
+							</div>
+						</div>
+					</div>
 				</div>
-				<div>
-					<i class="fas fa-fighter-jet icon"></i> 
+				<div class="six columns">
+					<div class="fourth columns sliderfade">
+						<div class="slider slider2">
+							<div>
+								<h6>worldbank</h6>
+							</div>
+							<div>
+								<i class="fas fa-plus icon"></i> 
+							</div>
+							<div>
+								<i class="fas fa-fighter-jet icon"></i> 
+							</div>
+							<div>
+								<i class="fas fa-flask icon"></i> 
+							</div>
+							<div>
+								<i class="fas fa-bicycle icon"></i> 
+							</div>
+							<div>
+								<h6> Net bilateral aid flows from DAC donors </h6> 
+							</div>
+						</div>
+					</div>
 				</div>
-				<div>
-					<i class="fas fa-flask icon"></i> 
+			</div>
+
+			<!-- there are a few shorthand columns widths as well -->
+			<div class="row">
+				<div class="six columns">
+					<div class="fourth columns arrows">
+						<i id="slider1down" class="fas fa-angle-down"></i>
+					</div>
 				</div>
-				<div>
-					<i class="fas fa-bicycle icon"></i> 
+				<div class="six columns">
+					<div class="fourth columns arrows">
+						<i id="slider2down" class="fas fa-angle-down"></i>
+					</div>
 				</div>
 			</div>
 		</div>
 
-
-
-		<!--	
-		-->
 	</body>
 	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
@@ -139,40 +196,48 @@ margin-bottom: 40px;
 				}
 			});
 			/* can be used to show info about the icon */
-				$( ".icon" ).hover(
-					function() {
-						// show 2nd slider
-						$(".slider2").show();
-						//$( this.parent ).append( $( '<div style="font-size: 12px"> <span> cycling </span> </div>' ) );
-						//$( this ).find("span").css( "font-size", "12px" );	
-						//$( this ).find("span").css( "margin", "12px" );	
-					}, function() {
-						// hide 2nd slider
-						$(".slider2").hide();
-					}
-				);
+			$( ".icon" ).hover(
+				//TODO update instead of show and hide	
+				function() {
+					// show 2nd slider
+					$(".slider2").show();
+					//$(".slider2").delay( 800 ).fadeIn( 400 ).show();
+					//$( this.parent ).append( $( '<div style="font-size: 12px"> <span> cycling </span> </div>' ) );
+					//$( this ).find("span").css( "font-size", "12px" );	
+					//$( this ).find("span").css( "margin", "12px" );	
+				}, function() {
+					// hide 2nd slider
+					$(".slider2").empty()
+					//$(".slider2").remove()
+					//$(".slider2").detach().delay( 800 ).fadeOut( 400 );
+					//$( "p" ).remove( ":contains('Hello')" );
+				}
+			);
 
 
 			$('.slider1').slick({
 				prevArrow: $("#slider1up"),
 				nextArrow: $("#slider1down"),
 				infinite: true,
-				//slidesToShow: 1,
-				//adaptiveHeight: true,
-				//slidesToScroll: 1,
+				slidesToShow: 4,
+				adaptiveHeight: true,
+				slidesToScroll: 0,
 				//rows: 3,
 				//autoplaySpeed: 3000,
 				//autoplay: true,
 				//fade: true,
-				focusOnSelect: true,
+				//focusOnSelect: true,
 				vertical: true,
 				//verticalSwiping: true,
 				//waitForAnimate: true,
 				//useCSS: true, //Enable/Disable CSS Transitions
+				//appendArrows: $(".arrows"), 
 				centerMode: true	
 			});
 			$('.slider2').slick({
-				//infinite: true,
+				prevArrow: $("#slider2up"),
+				nextArrow: $("#slider2down"),
+				infinite: true,
 				slidesToShow: 3,
 				adaptiveHeight: true,
 				slidesToScroll: 3,

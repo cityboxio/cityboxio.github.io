@@ -128,7 +128,8 @@ osm=L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}
 //var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
 
 var osmAttrib='Map data &copy; OpenStreetMap contributors';
-var osm2 = new L.TileLayer(blackwhite, {minZoom: 0, maxZoom: 13, attribution: osmAttrib });
+//var osm2 = new L.TileLayer(blackwhite, {minZoom: 0, maxZoom: 13, attribution: osmAttrib });
+var osm2 = new L.TileLayer(blackwhite, {minZoom: 1, maxZoom: 13, attribution: osmAttrib });
 //var miniMap= new L.Control.MiniMap(osm2, { toggleDisplay: true, position: 'topleft' }).addTo(map);
 var rect1 = {color: "grey", weight: 1};
 var rect2 = {color: "grey", weight: 1, opacity:0, fillOpacity:0};
@@ -137,7 +138,6 @@ var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true, aimingRectOptio
 L.control.zoom({
 	position:'topright'
 }).addTo(map);
-
 
 // 
 // mapLink = 
