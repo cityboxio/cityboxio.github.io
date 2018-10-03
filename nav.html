@@ -38,12 +38,12 @@ margin-left: 0px;
 		 */
 	}
 	.citybox-datasource{
-		font-size: 16px;	
+		font-size: 10px;	
 		/*
 		   text-shadow: 3px 3px 5px black;
 		   opacity: 0.7;
-		   padding: 20px;
 		 */
+		   padding: 10px;
 		transition: all 0.1s ease-out;
 	}
 	.citybox-datasource{
@@ -110,28 +110,26 @@ align-content: center;
 				<div class="six columns">
 					<div class="fourth columns sliderfade">
 						<div class="slider slider1">
+							
 							<div>
-								<h6>worldbank</h6>
+								<h6 class="citybox-datasource">datasource#1</h6>
 							</div>
 							<div>
-								<h6>worldbank</h6>
-							</div>
-							<div>
-								<h6>worldbank</h6>
+								<h6 class="citybox-datasource">datasource#2</h6>
 							</div>
 
 							<div>
-								<h6>worldbank</h6>
+								<h6 class="citybox-datasource">datasource#3</h6>
 							</div>
 							<div>
-								<h6 class="citybox-datasource">worldbank</h6>
+								<h6 class="citybox-datasource">datasource#4</h6>
 							</div>
 							<div>
-								<h6 class="citybox-datasource">worldbank</h6>
+								<h6 class="citybox-datasource">datasource#5</h6>
 							</div>
 
 							<div>
-								<h6 class="citybox-datasource">worldbank</h6>
+								<h6 class="citybox-datasource">datasource#6</h6>
 							</div>
 
 							<!--
@@ -180,35 +178,6 @@ align-content: center;
 			//vex.defaultOptions.className = 'vex-theme-top';
 			vex.defaultOptions.className = 'vex-theme-wireframe';
 
-			vex.dialog.open({
-				unsafeMessage: '<b>worldbank data for city, country</b>',
-				input: [
-					'<hr>', 
-					'icons here for updating the map', 
-					'<hr>', 
-					'icons here for downloads', 
-					//'<i class="fas fa-flask icon"></i>',
-					'<i class="far fa-file-excel icon"></i>',
-					'<i class="far fa-file-pdf icon"></i>',
-					'<div>',
-					//'download in pdf, csv, blahblah',
-					'</div>'
-				].join(''),
-				callback: function (data) {
-					if (!data) {
-						return console.log('Cancelled')
-					}
-					console.log('somthing');
-					//TODO update map panel of the selected things	
-					$('.demo-result-custom-vex-dialog').show().html([
-						'<h4>Result</h4>',
-						'<p>',
-						'Date: <b>' + data.date + '</b><br/>',
-						'Color: <input type="color" value="' + data.color + '" readonly />',
-						'</p>'
-					].join(''))
-				}
-			})
 
 
 			//vex.dialog.confirm({
@@ -222,28 +191,62 @@ align-content: center;
 			//	}
 			//})
 
-			$('.icon').on('click',function(){
+			//$('.icon').on('click',function(){
+			$('.citybox-datasource').on('click',function(){
 				if($(this).attr('data-click-state') == 1) {
 					//vex.dialog.alert('Thanks for checking out </br>vex!')
 					//showDialog(function(notes) {
 					//	$('#notes').text(notes);
 					//})
+					vex.dialog.open({
+						unsafeMessage: '<b>worldbank data for city, country</b>',
+						input: [
+							'<hr>', 
+							'icons here for updating the map', 
+							'<hr>', 
+							'icons here for downloads', 
+							//'<i class="fas fa-flask icon"></i>',
+							'<i class="far fa-file-excel icon"></i>',
+							'<i class="far fa-file-pdf icon"></i>',
+							'<div>',
+							//'download in pdf, csv, blahblah',
+							'</div>'
+						].join(''),
+						callback: function (data) {
+							if (!data) {
+								return console.log('Cancelled')
+							}
+							console.log('somthing');
+							//TODO update map panel of the selected things	
+							$('.demo-result-custom-vex-dialog').show().html([
+								'<h4>Result</h4>',
+								'<p>',
+								'Date: <b>' + data.date + '</b><br/>',
+								'Color: <input type="color" value="' + data.color + '" readonly />',
+								'</p>'
+							].join(''))
+						}
+					})
 
+					var color='#001f3f';
 					$(this).attr('data-click-state', 0)
-					$(this).css('color', 'red')
-					$(this).css('text-shadow', '3px 3px 16px red')
+					$(this).css('color', color)
+					$(this).css('text-shadow', '3px 3px 16px ' + color)
 				} else if ($(this).attr('data-click-state') == 2) {
+					var color='#0074D9';
 					$(this).attr('data-click-state', 1)
-					$(this).css('color', 'orange')
-					$(this).css('text-shadow', '3px 3px 16px orange')
+					$(this).css('color', color)
+					$(this).css('text-shadow', '3px 3px 16px ' + color)
 				} else if ($(this).attr('data-click-state') == 3) {
+					var color='#7FDBFF';
 					$(this).attr('data-click-state', 2)
-					$(this).css('color', 'blue')
-					$(this).css('text-shadow', '3px 3px 16px blue')
+					$(this).css('color', color)
+					$(this).css('text-shadow', '3px 3px 16px ' + color)
 				} else {
+					var color=' #F012BE ';
 					$(this).attr('data-click-state', 3)
-					$(this).css('color', 'green')
-					$(this).css('text-shadow', '3px 3px 16px green')
+					$(this).css('color', color)
+					$(this).css('text-shadow', '3px 3px 16px ' + color)
 				}
 			});
 			/* can be used to show info about the icon */
