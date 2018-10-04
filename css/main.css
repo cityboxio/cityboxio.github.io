@@ -92,10 +92,10 @@ input.searchbar {
 	background-position: right 10px center;
 	font-style: normal !important;
 	font-family: 'Comfortaa', cursive !important;
-	font-size: 18px !important;	
+	font-size: 22px !important;	
 	text-shadow: 0px 0px 6px rgba(255,255,255,0.7) !important; /* glow */
 	width: 90% !important;
-	height: 30px !important;
+	height: 35px !important;
 	opacity: 0.9 !important;
 	box-shadow: 0 8px 6px -6px black !important;
 	-moz-box-shadow: 0 8px 6px -6px black !important;
@@ -110,7 +110,7 @@ input.searchbar {
 	z-index:300000000 !important;
 	font-style: normal !important;
 	font-family: 'Comfortaa', cursive !important;
-	font-size: 18px !important;	
+	font-size: 22px !important;	
 	opacity: 0.95 !important;
 	width: 95% !important;
 	text-align: left;
