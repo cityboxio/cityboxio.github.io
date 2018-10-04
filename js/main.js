@@ -104,6 +104,31 @@ $( document ).ready(function() {
 	// wholink = 
 	// 	'i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
 
+
+	L.Control.DatasourceNav = L.Control.extend({
+		onAdd: function(map) {
+			//var img = L.DomUtil.create('img');
+			//var img = L.DomUtil.get('logo');
+			var nav = L.DomUtil.get('citybox-datasource-nav');
+
+			//img.src = '../../docs/images/logo.png';
+			//img.style.width = '200px';
+
+			return nav;
+		},
+
+		onRemove: function(map) {
+			// Nothing to do here
+		}
+	});
+
+	L.control.datasourcenav = function(opts) {
+		return new L.Control.DatasourceNav(opts);
+	}
+
+	//L.control.datasourcenav({ position: 'bottomleft' }).addTo(map);
+	L.control.datasourcenav({ position: 'topleft' }).addTo(map);
+
 	/******************/
 	/*** end of map ***/
 	/******************/
@@ -193,9 +218,124 @@ var options = {
 };
 
 $("#categories-basic").easyAutocomplete(options);
+$('#categories-basic').focus();
 /**************************/
 /*** end of autosuggest ***/
 /**************************/
-$('#categories-basic').focus();
+
+/**************************/
+/***** start of nav *******/
+/**************************/
+
+//var vex = require('vex-js');
+//vex.registerPlugin(require('vex-dialog'));
+//vex.defaultOptions.className = 'vex-theme-top';
+vex.defaultOptions.className = 'vex-theme-wireframe';
+
+//vex.dialog.confirm({
+//	message: 'Are you absolutely sure you want to destroy the alien planet?',
+//	callback: function (value) {
+//		if (value) {
+//			console.log('Successfully destroyed the planet.')
+//		} else {
+//			console.log('Chicken.')
+//		}
+//	}
+//})
+
+// color schme https://clrs.cc/
+//$('.icon').on('click',function(){
+$('.citybox-datasource').on('click',function(){
+	if($(this).attr('data-click-state') == 1) {
+		//vex.dialog.alert('Thanks for checking out </br>vex!')
+		//showDialog(function(notes) {
+		//	$('#notes').text(notes);
+		//})
+		vex.dialog.open({
+			unsafeMessage: '<b>worldbank data for city, country</b>',
+			input: [
+				'<hr>', 
+				'icons here for updating the map', 
+				'<hr>', 
+				'icons here for downloads', 
+				//'<i class="fas fa-flask icon"></i>',
+				'<i class="far fa-file-excel icon"></i>',
+				'<i class="far fa-file-pdf icon"></i>',
+				'<div>',
+				//'download in pdf, csv, blahblah',
+				'</div>'
+			].join(''),
+			callback: function (data) {
+				if (!data) {
+					return console.log('Cancelled')
+				}
+				console.log('somthing');
+				//TODO update map panel of the selected things	
+				$('.demo-result-custom-vex-dialog').show().html([
+					'<h4>Result</h4>',
+					'<p>',
+					'Date: <b>' + data.date + '</b><br/>',
+					'Color: <input type="color" value="' + data.color + '" readonly />',
+					'</p>'
+				].join(''))
+			}
+		})
+
+		var color='#001f3f';
+		$(this).attr('data-click-state', 0)
+		$(this).css('color', color)
+		$(this).css('text-shadow', '3px 3px 16px ' + color)
+	} else if ($(this).attr('data-click-state') == 2) {
+		var color='#0074D9';
+		$(this).attr('data-click-state', 1)
+		$(this).css('color', color)
+		$(this).css('text-shadow', '3px 3px 16px ' + color)
+	} else if ($(this).attr('data-click-state') == 3) {
+		var color='#7FDBFF';
+		$(this).attr('data-click-state', 2)
+		$(this).css('color', color)
+		$(this).css('text-shadow', '3px 3px 16px ' + color)
+	} else {
+		var color=' #F012BE ';
+		$(this).attr('data-click-state', 3)
+		$(this).css('color', color)
+		$(this).css('text-shadow', '3px 3px 16px ' + color)
+	}
+});
+/* can be used to show info about the icon */
+$( ".icon" ).hover(
+	function() {
+		//vex.dialog.alert('Thanks for checking out vex!')
+		//TODO open modal 
+		//$( this ).find("span").css( "margin", "12px" );	
+	}, function() {
+		//TODO close modal 
+		//$( "p" ).remove( ":contains('Hello')" );
+	}
+);
+
+
+$('.slider1').slick({
+	prevArrow: $("#slider1up"),
+	nextArrow: $("#slider1down"),
+	infinite: true,
+	slidesToShow: 4,
+	adaptiveHeight: true,
+	slidesToScroll: 0,
+	//rows: 3,
+	//autoplaySpeed: 3000,
+	//autoplay: true,
+	//fade: true,
+	//focusOnSelect: true,
+	vertical: true,
+	//verticalSwiping: true,
+	//waitForAnimate: true,
+	//useCSS: true, //Enable/Disable CSS Transitions
+	//appendArrows: $(".arrows"), 
+	centerMode: true	
+});
+/**************************/
+/****** end of nav ********/
+/**************************/
 
 });

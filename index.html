@@ -14,15 +14,22 @@
 		<!-- Leaflet Plugins -->
 		<link rel="stylesheet" href="css/leaflet.draw.css" />
 		<link rel="stylesheet" href="css/Control.MiniMap.min.css" />
-		
+
+		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="css/normalize.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+		<link rel="stylesheet" type="text/css" href="css/vex.css"/>
+		<link rel="stylesheet" type="text/css" href="css/vex-theme-wireframe.css"/>
+
 		<link href="css/main.css" rel="stylesheet" type="text/css">
 
 
 	</head>
 
 
-			<script type="text/javascript">
-			</script>
+	<script type="text/javascript">
+	</script>
 	<body>
 
 
@@ -45,10 +52,10 @@
 					<p>we <i class="fas fa-heart"></i> <strong>opendata</strong></p>
 					<p><strong>opendata</strong>hub | <strong>worldcities</strong></p>
 					<!--
-					<p><strong>opendata</strong>hub for <strong>cities</strong></p>
-					<p><strong>opendata</strong>hub for <strong>cities</strong></p>
+	     <p><strong>opendata</strong>hub for <strong>cities</strong></p>
+	     <p><strong>opendata</strong>hub for <strong>cities</strong></p>
 	     <p><strong>opendata</strong>hub | world <strong>cities</strong></p>
-					<p>worldcities <strong>opendata</strong>hub</p>
+	     <p>worldcities <strong>opendata</strong>hub</p>
 	     <p>we are opendata hackers, just like <strong>you</strong></p>
 	     <p><strong>opendata</strong> for everyone!</p>
 	     <p>use our <strong>API</strong>s</p>
@@ -71,11 +78,11 @@
 		</br>
 		<hr>
 		</br>
-		
+
 		<!--		
-		<div>
-			<h1>Archives</h1> 
-		</div>
+	  <div>
+	  <h1>Archives</h1> 
+	  </div>
 	  <img src="img/datasources/worldbank.png" alt="worldbank" style="width: 250px">
 		-->
 		<!--
@@ -88,27 +95,98 @@
 	  data-tt-label-uncheck="uncheck">
 	  </div>
 
-		</br>
-		<hr>
-		</br>
+	  </br>
+	  <hr>
+	  </br>
 		-->
-		<div>
-			copyrightnotice/contact/otherlinks including API documentation, etc.
+
+		<!-- .container is main centered wrapper -->
+		<div id="citybox-datasource-nav" class="container">
+			<!-- columns should be the immediate child of a .row -->
+			<div class="row">
+				<div class="six columns">
+					<div class="fourth columns arrows">
+						<i id="slider1up" class="fas fa-angle-up arrows"></i>
+					</div>
+				</div>
+			</div>
+			<!-- just use a number and class 'column' or 'columns' -->
+			<div class="row">
+				<div class="six columns">
+					<div class="fourth columns sliderfade">
+						<div class="slider slider1">
+
+							<div>
+								<h6 class="citybox-datasource">datasource#1</h6>
+							</div>
+							<div>
+								<h6 class="citybox-datasource">datasource#2</h6>
+							</div>
+
+							<div>
+								<h6 class="citybox-datasource">datasource#3</h6>
+							</div>
+							<div>
+								<h6 class="citybox-datasource">datasource#4</h6>
+							</div>
+							<div>
+								<h6 class="citybox-datasource">datasource#5</h6>
+							</div>
+
+							<div>
+								<h6 class="citybox-datasource">datasource#6</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- there are a few shorthand columns widths as well -->
+			<div class="row">
+				<div class="six columns">
+					<div class="fourth columns arrows">
+						<i id="slider1down" class="fas fa-angle-down"></i>
+					</div>
+				</div>
+			</div>
 		</div>
-		</br>
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/jquery.easy-autocomplete.min.js"></script>
+		<!--		
+	  datasources in verticalslick and datasets in opacity modals. may use color theory to toggle a platte for aviable datasets that can be represented on the map. also modals allows for archive downloads. tables inside modals will be via skeleton.css 
+		<div id="footer" class="parent">  
+			<div class="left">
+			<div class="right">
+			</div>
+			</div>
+		-->
+		<div id="footer" class="container">
+			<!-- columns should be the immediate child of a .row -->
+			<div class="row">
+				<div class="six columns">
+					<b>API documentation</b>
+				</div>
+				<div class="six columns">
+					<b>Address</b>
+					73, Road 15, Maadi
+					Cairo, Egypt
+				</div>
+			</div>
+			</br>
+			<div class="row copyright">
+				&copy; citybox.io
+			</div>
+			</br>
+		</div>
+
+			<script src="js/jquery-3.3.1.min.js"></script>
+			<script src="js/jquery.easy-autocomplete.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 		<script src="js/jquery.tinytoggle.min.js" type="text/javascript"></script>
 		<script src="js/leaflet.js"></script>
 		<script src="js/leaflet.draw.js" type="text/javascript"></script>
 		<script src="js/Control.MiniMap.min.js" type="text/javascript"></script>
-
-		<!--
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.2.1/bloodhound.min.js"></script>
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.10.6/jquery.typeahead.min.js"></script>
-
-	  -->
-	  <script src="js/main.js"></script>
+		<script type="text/javascript" src="js/slick.min.js"></script>
+		<!--	<script type="text/javascript" src="js/vex.min.js"></script> -->
+		<script type="text/javascript" src="js/vex.combined.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>

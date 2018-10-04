@@ -29,35 +29,35 @@ height: 90% !important;
 	 z-index: 999;
  }
 
-.leaflet-control-attribution{
+ .leaflet-control-attribution{
 	 visibility: hidden;
-}
+ }
 
-.leaflet-tile{ 
-	filter: blur(10px)
-}
-.leaflet-tile.leaflet-tile-loaded{
-	filter: blur(0);
-	transition:.6s all ease-in;
-}
+ .leaflet-tile{ 
+	 filter: blur(10px)
+ }
+ .leaflet-tile.leaflet-tile-loaded{
+	 filter: blur(0);
+	 transition:.6s all ease-in;
+ }
 
 
-.leaflet-control-zoom-in,
-.leaflet-control-zoom-out {
-	padding: 5px;
-}
-.leaflet-control-zoom-out {
-}
+ .leaflet-control-zoom-in,
+ .leaflet-control-zoom-out {
+	 padding: 5px;
+ }
+ .leaflet-control-zoom-out {
+ }
 
-.leaflet-touch .leaflet-control-zoom-in {
-}
-.leaflet-touch .leaflet-control-zoom-out {
-}
-/*
-.leaflet-control-zoom.leaflet-bar.leaflet-control > a {
-float: right;
-}
- */
+ .leaflet-touch .leaflet-control-zoom-in {
+ }
+ .leaflet-touch .leaflet-control-zoom-out {
+ }
+ /*
+ .leaflet-control-zoom.leaflet-bar.leaflet-control > a {
+ float: right;
+ }
+  */
 /* 2col header */
 .parent {
 	display: flex;
@@ -182,3 +182,98 @@ hr{
 {
 	font-size: 14px !important;
 }
+
+/*** start of nav ***/
+.icon
+{
+	/* 
+	 * text-shadow: 1px 1px 1px #ccc;
+	 */
+font-size: 32px;	
+text-shadow: 3px 3px 5px black;
+opacity: 0.7;
+padding: 20px;
+transition: all 0.1s ease-out;
+	}
+	.icon:hover {
+		transform: scale(1.5);
+		cursor: pointer
+		/*
+		margin: 10px;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		position: relative;
+		margin-left: 0px;
+		 */
+	}
+	.citybox-datasource{
+		font-size: 10px;	
+		/*
+		text-shadow: 3px 3px 5px black;
+		opacity: 0.7;
+		 */
+padding: 10px;
+transition: all 0.1s ease-out;
+	}
+	.citybox-datasource{
+		transform: scale(1.4);
+		cursor: pointer
+	}
+	.container{
+		align-content: center !important;
+		width:40%;
+		/*
+		margin-top: 100px;
+		 */
+	}
+
+	.slider{
+		font-size: 22px !important;
+		list-style: none;
+		text-align: center;
+		padding: 10px;
+		/*	
+		height: 40px;	
+		height: 40px;	
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-align-content: center;
+		align-content: center;
+		 */
+	}
+
+	.arrows{
+		font-size: 32px;
+		text-align: center;
+		cursor: pointer
+		/*	
+		margin-right: 80px;
+		 */
+	}
+
+	.sliderfade:before{
+		background: radial-gradient(farthest-corner at center, transparent, green 75%);
+	}
+
+	.vex.vex-theme-wireframe .vex-content{
+		max-width: 90%;	
+		width: 90%;	
+		opacity: 0.9;
+	}
+	/*** end of nav ***/
+	/*** start of footer ***/
+	#footer {
+		clear: both;
+		position: relative;
+		z-index: 10;
+		height: 3em;
+		margin-top: -3em;
+	}
+	.copyright{
+		color: black;
+		text-shadow: 0px 0px 0.5px rgba(34, 27, 27, 0.7) !important;
+	}
+	/*** end of footer ***/
+
