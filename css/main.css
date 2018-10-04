@@ -53,6 +53,10 @@ height: 90% !important;
  }
  .leaflet-touch .leaflet-control-zoom-out {
  }
+ .leaflet-container
+ {
+	 font-family: 'Comfortaa', cursive;
+ }
  /*
  .leaflet-control-zoom.leaflet-bar.leaflet-control > a {
  float: right;
