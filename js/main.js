@@ -321,12 +321,14 @@ $('.slider1').slick({
 	nextArrow: $("#slider1down"),
 	infinite: true,
 	slidesToShow: 5,
-	//adaptiveHeight: true,
-	//slidesToScroll: 2,
+	adaptiveHeight: true,
+	slidesToScroll: 3,
+	speed: 1000,
 	//rows: 3,
 	//autoplaySpeed: 3000,
 	//autoplay: true,
 	//fade: true,
+	//centerMode: true,	
 	focusOnSelect: true,
 	vertical: true,
 	verticalSwiping: true,
@@ -336,7 +338,6 @@ $('.slider1').slick({
 	//cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
 	cssEase: 'linear',
 	touchThreshold: 100
-	//centerMode: true	
 });
 /**************************/
 /****** end of nav ********/
