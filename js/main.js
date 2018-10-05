@@ -245,7 +245,8 @@ vex.defaultOptions.className = 'vex-theme-wireframe';
 
 // color schme https://clrs.cc/
 //$('.icon').on('click',function(){
-$('.citybox-datasource').on('click',function(){
+//$('.citybox-datasource').on('click',function(){
+$('.btn').on('click',function(){
 	if($(this).attr('data-click-state') == 1) {
 		//vex.dialog.alert('Thanks for checking out </br>vex!')
 		//showDialog(function(notes) {
@@ -319,14 +320,14 @@ $('.slider1').slick({
 	prevArrow: $("#slider1up"),
 	nextArrow: $("#slider1down"),
 	infinite: true,
-	slidesToShow: 4,
+	slidesToShow: 1,
 	adaptiveHeight: true,
-	slidesToScroll: 0,
+	//slidesToScroll: 2,
 	//rows: 3,
 	//autoplaySpeed: 3000,
 	//autoplay: true,
 	//fade: true,
-	//focusOnSelect: true,
+	focusOnSelect: true,
 	vertical: true,
 	//verticalSwiping: true,
 	//waitForAnimate: true,
