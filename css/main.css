@@ -264,6 +264,7 @@ transition: all 0.1s ease-out;
 	{
 		font-size: 10px;	
 		/*
+		color: black !important;
 		text-shadow: 3px 3px 5px black;
 		opacity: 0.7;
 		padding: 20px;
@@ -289,6 +290,12 @@ transition: all 0.1s ease-out;
 		 */
 }
 
+.leaflet-container a
+{
+	color: black;
+	text-decoration: none;
+}
+
 .btn,
 input[type="submit"]
 {
@@ -304,6 +311,7 @@ input[type="submit"]
 	 */
 font-family: 'Comfortaa', cursive !important;
 font-weight:400;
+text-shadow: 0px 0px 0.5px rgba(34, 27, 27, 0.7) !important;
 letter-spacing: 3px;
 -webkit-transition: all .4s ease-in-out;
 -moz-transition: all .4s ease-in-out;
@@ -364,6 +372,7 @@ color: #1f1f1f;
 	{
 		margin: 10px;
 	}
+
 	/*** end of nav ***/
 
 	/*** start of header ***/
