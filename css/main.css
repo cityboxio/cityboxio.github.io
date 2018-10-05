@@ -223,11 +223,11 @@ transition: all 0.1s ease-out;
 		transform: scale(1.4);
 		cursor: pointer
 	}
-	.container{
+	.citybox-datasource-nav-container{
 		align-content: center !important;
-		width:40%;
+		width:50%;
 		/*
-		margin-top: 100px;
+		margin: 20px;
 		 */
 	}
 
@@ -268,6 +268,18 @@ transition: all 0.1s ease-out;
 	}
 	/*** end of nav ***/
 	/*** start of footer ***/
+	.footer-container{
+		text-align: center !important;
+		vertical-align: middle !important;
+		align-content: center !important;
+		width:100%;
+		line-height: 30px;
+		/*
+		display: flex;
+		margin: 20px;
+		 */
+	}
+
 	#footer {
 		clear: both;
 		position: relative;
@@ -275,6 +287,7 @@ transition: all 0.1s ease-out;
 		height: 3em;
 		margin-top: -3em;
 	}
+
 	.copyright{
 		color: black;
 		text-shadow: 0px 0px 0.5px rgba(34, 27, 27, 0.7) !important;
