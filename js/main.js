@@ -243,45 +243,9 @@ vex.defaultOptions.className = 'vex-theme-wireframe';
 //	}
 //})
 
-// color schme https://clrs.cc/
-//$('.icon').on('click',function(){
 //$('.btn').on('click',function(){
-$('.citybox-datasource').on('click',function(){
+$('.icon').on('click',function(){
 	if($(this).attr('data-click-state') == 1) {
-		//vex.dialog.alert('Thanks for checking out </br>vex!')
-		//showDialog(function(notes) {
-		//	$('#notes').text(notes);
-		//})
-		vex.dialog.open({
-			unsafeMessage: '<b>worldbank data for city, country</b>',
-			input: [
-				'<hr>', 
-				'icons here for updating the map', 
-				'<hr>', 
-				'icons here for downloads', 
-				//'<i class="fas fa-flask icon"></i>',
-				'<i class="far fa-file-excel icon"></i>',
-				'<i class="far fa-file-pdf icon"></i>',
-				'<div>',
-				//'download in pdf, csv, blahblah',
-				'</div>'
-			].join(''),
-			callback: function (data) {
-				if (!data) {
-					return console.log('Cancelled')
-				}
-				console.log('somthing');
-				//TODO update map panel of the selected things	
-				$('.demo-result-custom-vex-dialog').show().html([
-					'<h4>Result</h4>',
-					'<p>',
-					'Date: <b>' + data.date + '</b><br/>',
-					'Color: <input type="color" value="' + data.color + '" readonly />',
-					'</p>'
-				].join(''))
-			}
-		})
-
 		var color='#001f3f';
 		$(this).attr('data-click-state', 0)
 		$(this).css('color', color)
@@ -303,6 +267,50 @@ $('.citybox-datasource').on('click',function(){
 		$(this).css('text-shadow', '3px 3px 16px ' + color)
 	}
 });
+
+// color schme https://clrs.cc/
+//$('.icon').on('click',function(){
+//$('.btn').on('click',function(){
+$('.citybox-datasource').on('click',function(){
+	//vex.dialog.alert('Thanks for checking out </br>vex!')
+	//showDialog(function(notes) {
+	//	$('#notes').text(notes);
+	//})
+	var cityboxdatasource = $(this).find('a').text();
+	vex.dialog.open({
+		unsafeMessage: '<b>' + cityboxdatasource + '</b> data for city, country',
+		input: [
+			'<hr>', 
+			'icons here for updating the map', 
+			'<hr>', 
+			'icons here for downloads', 
+			//'<i class="fas fa-flask icon"></i>',
+			'<i class="far fa-file-excel icon"></i>',
+			'<i class="far fa-file-pdf icon"></i>',
+			'<div>',
+			//'download in pdf, csv, blahblah',
+			'</div>'
+		].join(''),
+		callback: function (data) {
+			if (!data) {
+				return console.log('Cancelled')
+			}
+			console.log('somthing');
+				//TODO update map panel of the selected things	
+			$('.demo-result-custom-vex-dialog').show().html([
+				'<h4>Result</h4>',
+				'<p>',
+				'Date: <b>' + data.date + '</b><br/>',
+				'Color: <input type="color" value="' + data.color + '" readonly />',
+				'</p>'
+			].join(''))
+		}
+	})
+	var color='black';
+	$(this).css('color', color)
+	$(this).css('text-shadow', '3px 3px 16px ' + color)
+});
+
 /* can be used to show info about the icon */
 $( ".icon" ).hover(
 	function() {
