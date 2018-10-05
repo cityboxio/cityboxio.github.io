@@ -127,7 +127,7 @@ $( document ).ready(function() {
 	}
 
 	//L.control.datasourcenav({ position: 'bottomleft' }).addTo(map);
-	L.control.datasourcenav({ position: 'topleft' }).addTo(map);
+	L.control.datasourcenav({ position: 'bottomleft' }).addTo(map);
 
 	/******************/
 	/*** end of map ***/
@@ -245,8 +245,8 @@ vex.defaultOptions.className = 'vex-theme-wireframe';
 
 // color schme https://clrs.cc/
 //$('.icon').on('click',function(){
-//$('.citybox-datasource').on('click',function(){
-$('.btn').on('click',function(){
+//$('.btn').on('click',function(){
+$('.citybox-datasource').on('click',function(){
 	if($(this).attr('data-click-state') == 1) {
 		//vex.dialog.alert('Thanks for checking out </br>vex!')
 		//showDialog(function(notes) {
@@ -320,8 +320,8 @@ $('.slider1').slick({
 	prevArrow: $("#slider1up"),
 	nextArrow: $("#slider1down"),
 	infinite: true,
-	slidesToShow: 1,
-	adaptiveHeight: true,
+	slidesToShow: 5,
+	//adaptiveHeight: true,
 	//slidesToScroll: 2,
 	//rows: 3,
 	//autoplaySpeed: 3000,
@@ -329,11 +329,14 @@ $('.slider1').slick({
 	//fade: true,
 	focusOnSelect: true,
 	vertical: true,
-	//verticalSwiping: true,
-	//waitForAnimate: true,
+	verticalSwiping: true,
+	waitForAnimate: true,
 	//useCSS: true, //Enable/Disable CSS Transitions
-	//appendArrows: $(".arrows"), 
-	centerMode: true	
+	//appendArrows: $(".arrows"),
+	//cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+	cssEase: 'linear',
+	touchThreshold: 100
+	//centerMode: true	
 });
 /**************************/
 /****** end of nav ********/
