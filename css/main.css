@@ -12,7 +12,7 @@ html,body
 	opacity: 0.5 !important;
 	 */
 background: white; 
-height: 95% !important;
+height: 96% !important;
 
  }
 
@@ -64,11 +64,13 @@ height: 95% !important;
  float: right;
  }
   */
-/*
 .logo{
+	
+/*
 height: 80px !important;
-}
  */
+width: 200px;
+}
 .searchbar
 {
 	/*
@@ -91,7 +93,7 @@ input.searchbar
 	font-family: 'Comfortaa', cursive !important;
 	font-size: 22px !important;	
 	text-shadow: 0px 0px 6px rgba(255,255,255,0.7) !important; /* glow */
-	width: 90% !important;
+	width: 100% !important;
 	height: 50px !important;
 	opacity: 0.9 !important;
 	box-shadow: 0 8px 6px -6px black !important;
@@ -110,7 +112,7 @@ input.searchbar
 	font-family: 'Comfortaa', cursive !important;
 	font-size: 22px !important;	
 	opacity: 0.95 !important;
-	width: 90% !important;
+	width: 100% !important;
 	text-align: left;
 	/* glow */
 	/* text-shadow: 0px 0px 6px rgba(255,255,255,0.7) !important; */
@@ -368,12 +370,14 @@ color: #1f1f1f;
 	.header-container
 	{
 		text-align: center;
-		height: 70px; /* min-height: 10vh;*/
+		height: 20%; /* min-height: 10vh;*/
 		vertical-align: baseline !important;
 		align-content: center !important;
 		width:100%;
 		line-height: 1 !important; 
+		margin-top: 5px;
 		/*
+		margin-bottom: 15px;
 		align-items: center;
 		display: flex;
 		margin: 20px;
