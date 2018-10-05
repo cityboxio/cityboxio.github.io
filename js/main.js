@@ -306,9 +306,10 @@ $('.citybox-datasource').on('click',function(){
 			].join(''))
 		}
 	})
-	var color='black';
-	$(this).css('color', color)
-	$(this).css('text-shadow', '3px 3px 16px ' + color)
+	//var color='white';
+	//$(this).css('color', color)
+	//$(this).css('background-color', "black")
+	//$(this).css('text-shadow', '3px 3px 16px ' + color)
 });
 
 /* can be used to show info about the icon */
@@ -330,7 +331,7 @@ $('.slider1').slick({
 	infinite: true,
 	slidesToShow: 5,
 	adaptiveHeight: true,
-	slidesToScroll: 3,
+	slidesToScroll: 1,
 	speed: 1000,
 	//rows: 3,
 	//autoplaySpeed: 3000,
