@@ -1,8 +1,8 @@
 html,body
 {
 	margin: auto;
-	width:97%;
-	height:90%;
+	width:90%;
+	height:85%;
 	font-family: 'Comfortaa', cursive;
 }
 
@@ -10,6 +10,7 @@ html,body
 	/* 
 	border: 5px solid black;
 	opacity: 0.5 !important;
+	width: 90% !important;
 	 */
 background: white; 
 height: 96% !important;
@@ -225,6 +226,8 @@ hr
 		text-align: center;
 		cursor: pointer
 		/*	
+		text-shadow: 1px 1px 1px #ccc;
+		text-shadow: 0px 0px 16px rgba(255,255,255,0.7) !important; 
 		margin-right: 80px;
 		 */
 	}
