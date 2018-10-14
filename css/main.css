@@ -567,10 +567,10 @@ color: #1f1f1f;
 box-shadow: 0 8px 6px -6px black !important;
 filter: brightness(1.5) grayscale(1);
 mix-blend-mode: multiply;
-max-width:100% !important;
-max-height:100% !important;
-width: auto;
 /* 
+width: auto;
+max-height:100% !important;
+max-width:100% !important;
 height: auto;
  * height: auto;
 width: auto;
