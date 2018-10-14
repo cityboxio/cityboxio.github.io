@@ -48,7 +48,9 @@ $( document ).ready(function() {
 
 	//var map = L.map('map', {drawControl: true}).setView(
 	var map = L.map('map',{zoomControl: false}).setView(
-		[31.205753, 29.924526], 
+		//[31.205753, 29.924526], 
+		//[30.0444, 31.2357], //cairo
+		[30.044, 31.235], 
 		8); // alexandria
 
 	//var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -104,7 +106,9 @@ $( document ).ready(function() {
 	// wholink = 
 	// 	'i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
 
-
+	//
+	// datasource navigation control
+	//
 	L.Control.DatasourceNav = L.Control.extend({
 		onAdd: function(map) {
 			//var img = L.DomUtil.create('img');
@@ -121,13 +125,30 @@ $( document ).ready(function() {
 			// Nothing to do here
 		}
 	});
-
 	L.control.datasourcenav = function(opts) {
 		return new L.Control.DatasourceNav(opts);
 	}
-
 	//L.control.datasourcenav({ position: 'bottomleft' }).addTo(map);
 	L.control.datasourcenav({ position: 'bottomleft' }).addTo(map);
+
+	//
+	// city searchbar control
+	//
+	//L.Control.SandboxCitySearch = L.Control.extend({
+	//	onAdd: function(map) {
+	//		var nav = L.DomUtil.get('citybox-sandbox-searchbar');
+	//		return nav;
+	//	},
+	//
+	//		onRemove: function(map) {
+	//			// Nothing to do here
+	//		}
+	//	});
+	//	L.control.sandboxcitysearch = function(opts) {
+	//		return new L.Control.SandboxCitySearch(opts);
+	//	}
+	//	L.control.sandboxcitysearch({ position: 'topright' }).addTo(map);
+
 
 	/******************/
 	/*** end of map ***/
@@ -147,7 +168,6 @@ $( document ).ready(function() {
 			flag="error";	
 		}
 console.log("found flag: " + flag);
-
 return flag;
 };
 
@@ -155,7 +175,7 @@ var options = {
 	//url: "./../DATA/cities.json",
 	//url: "./DATA/cities.small.json",
 	url: "./DATA/world-cities_json.json",
-	placeholder: "search a city",
+	placeholder: "sandbox a city",
 	//adjustWidth: true,	
 	getValue: function(element) {
 		//return $(element).find("name").text();	
@@ -168,7 +188,7 @@ var options = {
 		sort: {
 			enabled: true 
 		},
-		maxNumberOfElements: 6,
+		maxNumberOfElements: 10,
 
 		showAnimation: {
 			type: "slide",
@@ -192,20 +212,15 @@ var options = {
 		method: function(value, item) {
 			//return "<img src='" + item.icon + "' /> | " + item.type + " | " + value;
 
-			return "</br>" + 
-				"</br>" + 
-				"<b>" + value + 
+			return "<b>" + value + 
+				'<img src="img/flags/'+ 
+				findFlag(item.country).toLowerCase() +
+				'.svg" alt="" style="width: 40px; height: 20; float: right;" class="flag">'+
 				"</b>" + 
 				", </br>" + 
 				item.subcountry + 
 				", " +
-				item.country +
-				'<img src="img/flags/'+ 
-				findFlag(item.country).toLowerCase() +
-				'.svg" alt="" style="width: 40px; height: 20; float: right;" class="flag">'+
-				"</br>" +
-				"</br>" +
-				"</br>"  
+				item.country 
 			;
 		}
 	}
@@ -329,7 +344,7 @@ $('.slider1').slick({
 	prevArrow: $("#slider1up"),
 	nextArrow: $("#slider1down"),
 	infinite: true,
-	slidesToShow: 5,
+	slidesToShow: 3,
 	adaptiveHeight: true,
 	slidesToScroll: 2,
 	speed: 1000,
@@ -351,5 +366,136 @@ $('.slider1').slick({
 /**************************/
 /****** end of nav ********/
 /**************************/
+
+/***************************************/
+/****** start of cityboxhackathon ********/
+/***************************************/
+$('#citybox-hackathon').slick({
+	//dots: true,
+	//adaptiveHeight: true,
+	//variableWidth: true,	
+	infinite: true,
+	speed: 500,
+	fade: true,
+	autoplaySpeed: 3000,
+	autoplay: true,
+	cssEase: 'linear'
+});
+/***************************************/
+/****** end of cityboxhackathon ********/
+/***************************************/
+
+/***************************************/
+/********** start of niceScroll ********/
+/***************************************/
+$("body").niceScroll({
+	cursorwidth:7,
+	cursoropacitymin:0.05,
+	//cursorcolor:'#6e8cb6',
+	//cursorborder:'none',
+	//cursorborderradius:0,
+	cursorminheight: 140,
+	railpadding: { top: 10, right: 20, left: 0, bottom: 10 }, // set padding for rail bar
+	//scrollspeed: 100,
+	smoothscroll: true,
+	autohidemode:'leave'
+});
+/***************************************/
+/********** end of nicScroll************/
+/***************************************/
+
+/***************************************/
+/********** start of timeline ************/
+/***************************************/
+$("#timelineContainer").niceScroll({
+	//cursorwidth:3,
+	cursorwidth: "20px", // cursor width in pixel (you can also write "5px")
+	cursorheight: "5px", // cursor width in pixel (you can also write "5px")
+	boxzoom: false, // enable zoom for box content	
+	cursoropacitymin:0.05,
+	//cursorcolor:'#6e8cb6',
+	//cursorborder:'none',
+	//cursorborderradius:0,
+	//cursorminheight: 10,
+	//cursorminwidth: 10,
+	cursorfixedheight: false, // set fixed height for cursor in pixel	
+	railpadding: { top: 0, right: 0, left: 0, bottom: -40 }, // set padding for rail bar
+	//scrollspeed: 100,
+	smoothscroll: true,
+	autohidemode:'leave'
+});
+
+//console.log('hmm', d3KitTimeline);
+console.log('loading map timeline');
+
+var data = [
+	{time: new Date(2012, 4,25), episode: 4, name: 'datasourceA:datasetC'},
+	{time: new Date(2016, 4,25), episode: 4, name: 'datasourceB:datasetC'},
+	{time: new Date(2015, 4,1), episode: 4, name: 'datasourceC:datasetA'},
+	{time: new Date(2018, 4,2), episode: 4, name: 'datasourceC:datasetB'},
+	{time: new Date(2013, 4,2), episode: 4, name: 'datasourceC:datasetC'},
+	{time: new Date(2016, 4,9), episode: 4, name: 'datasourceD:datasetA'},
+	{time: new Date(2016, 4,27), episode: 4, name: 'datasourceE:datasetE'},
+	{time: new Date(2016, 4,26), name: 'transport4cairo:maadi'},
+	{time: new Date(2017, 4,26), name: 'transport4cairo:maadi'},
+	{time: new Date(2018, 4,26), name: 'transport4cairo:maadi'},
+	{time: new Date(2019, 4,26), name: 'predicted transport4cairo:maadi'},
+	//{time: new Date(1980, 4,17), episode: 5, name: 'The Empire Strikes Back'},
+	//{time: new Date(1984, 4,25), episode: 6, name: 'Return of the Jedi'},
+	//{time: new Date(1999, 4,19), episode: 1, name: 'The Phantom Menace'},
+	//{time: new Date(2002, 4,16), episode: 2, name: 'Attack of the Clones'},
+	//{time: new Date(2005, 4,19), episode: 3, name: 'Revenge of the Sith'},
+	//{time: new Date(2015,11,18), episode: 7, name: 'The Force Awakens'},
+];
+
+//var initialWidth= 800;
+//var initialHeight=220;
+//var margin= {left: 20, right: 20, top: 20, bottom: 20};
+//var innerWidth =  initialWidth - margin.left - margin.right;
+var chart = new d3KitTimeline('#timeline', {
+	direction: 'up',
+	margin:{left: 40, right: 40, top: 10, bottom: 20}, 
+	initialWidth: 1200,
+	//initialHeight: 200,
+	//labelBgColor: "#777",
+	//amount: 20,
+	//minWidth: 40,
+	//maxWidth: 60,
+	//algorithm: 'overlap',
+	labelBgColor: "black",
+	//labella: {maxPos: 500, algorithm: 'overlap'},
+	//labella: {maxPos: 700, algorithm: 'simple', density: 1, lineSpacing: 2, nodeSpacing: 2},
+	//labella: {minPos: 300, maxPos: 600, algorithm: 'overlap', density: 1, lineSpacing: 2, nodeSpacing: 2},
+	//labella: {minPos: 300, maxPos: 600, algorithm: 'simple', density: 1, lineSpacing: 2, nodeSpacing: 2},
+	labella: {minPos: 200, maxPos: 1000, algorithm: 'simple', density: 1, lineSpacing: 2, nodeSpacing: 8},
+	//textFn: function(d){ return d.time.getFullYear() + " </br> " + d.name;}
+	textFn: function(d){ return d.time.getFullYear() + " - " + d.name;}
+});
+
+
+//var setdata = function(d,i){
+//	var cdata = d3.select("#crisprdata");
+//	cdata.selectAll("*").remove()		
+//	cdata.data([d]).append("h3").text(function(d){return d.title});
+//	cdata.data([d]).append("hr");
+//	cdata.data([d]).append("h4").text(function(d){return d.person + " - " + d.institute});
+//	cdata.data([d]).append("h4").text(function(d){return d.date});
+//	cdata.data([d]).append("p").text(function(d){return d.discovery});
+//};
+//chart.data(data);
+//chart.on("labelMouseover", function(d,i){setdata(d,i)} );
+//
+
+chart.data(data);
+//chart.on("labelMouseover", function(d,i){
+chart.on("labelClick", function(d,i){
+	alert("map updated with ");	
+	//setdata(d,i);
+});
+chart.visualize().resizeToFit();
+//chart.updateDimensionNow();
+/***************************************/
+/********** end of timeline ************/
+/***************************************/
 
 });
