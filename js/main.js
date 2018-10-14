@@ -409,10 +409,10 @@ $("body").niceScroll({
 /***************************************/
 $("#timelineContainer").niceScroll({
 	//cursorwidth:3,
-	cursorwidth: "20px", // cursor width in pixel (you can also write "5px")
-	cursorheight: "5px", // cursor width in pixel (you can also write "5px")
-	boxzoom: false, // enable zoom for box content	
+	cursorwidth: "7px", // cursor width in pixel (you can also write "5px")
 	cursoropacitymin:0.05,
+	cursorheight: "140px", // cursor width in pixel (you can also write "5px")
+	boxzoom: false, // enable zoom for box content	
 	//cursorcolor:'#6e8cb6',
 	//cursorborder:'none',
 	//cursorborderradius:0,
