@@ -1,8 +1,8 @@
 html,body
 {
 	margin: auto;
-	width:90%;
-	height:80%;
+	width:95%;
+	height:100%;
 	font-family: 'Comfortaa', cursive;
 }
 
@@ -13,7 +13,7 @@ html,body
 	width: 90% !important;
 	 */
 background: white; 
-height: 80% !important;
+height: 150% !important;
 
  }
 

@@ -51,7 +51,7 @@ $( document ).ready(function() {
 		//[31.205753, 29.924526], 
 		//[30.0444, 31.2357], //cairo
 		[30.044, 31.235], 
-		8); // alexandria
+		12); // alexandria
 
 	//var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 	//var osmAttrib='Map data &copy; OpenStreetMap contributors';
@@ -129,7 +129,28 @@ $( document ).ready(function() {
 		return new L.Control.DatasourceNav(opts);
 	}
 	//L.control.datasourcenav({ position: 'bottomleft' }).addTo(map);
-	L.control.datasourcenav({ position: 'bottomleft' }).addTo(map);
+	//L.control.datasourcenav({ position: 'bottomleft' }).addTo(map);
+	L.control.datasourcenav({ position: 'topleft' }).addTo(map);
+
+
+	//
+	// timeline control
+	//
+	L.Control.DatasourceTimeline = L.Control.extend({
+		onAdd: function(map) {
+			var timeline = L.DomUtil.get('timeline');
+			return timeline;
+		},
+		onRemove: function(map) {
+			// Nothing to do here
+		}
+	});
+	L.control.datasourcetimeline = function(opts) {
+		return new L.Control.DatasourceTimeline(opts);
+	}
+	//L.control.datasourcenav({ position: 'bottomleft' }).addTo(map);
+	L.control.datasourcetimeline({ position: 'topright' }).addTo(map);
+
 
 	//
 	// city searchbar control
@@ -453,7 +474,9 @@ var data = [
 //var margin= {left: 20, right: 20, top: 20, bottom: 20};
 //var innerWidth =  initialWidth - margin.left - margin.right;
 var chart = new d3KitTimeline('#timeline', {
-	direction: 'up',
+	//direction: 'up',
+	//direction: 'right',
+	direction: 'left',
 	margin:{left: 40, right: 40, top: 10, bottom: 20}, 
 	initialWidth: 1200,
 	//initialHeight: 200,
@@ -467,7 +490,8 @@ var chart = new d3KitTimeline('#timeline', {
 	//labella: {maxPos: 700, algorithm: 'simple', density: 1, lineSpacing: 2, nodeSpacing: 2},
 	//labella: {minPos: 300, maxPos: 600, algorithm: 'overlap', density: 1, lineSpacing: 2, nodeSpacing: 2},
 	//labella: {minPos: 300, maxPos: 600, algorithm: 'simple', density: 1, lineSpacing: 2, nodeSpacing: 2},
-	labella: {minPos: 200, maxPos: 1000, algorithm: 'simple', density: 1, lineSpacing: 2, nodeSpacing: 8},
+	//labella: {minPos: 200, maxPos: 1000, algorithm: 'simple', density: 1, lineSpacing: 2, nodeSpacing: 8},
+	labella: {algorithm: 'simple', density: 1, lineSpacing: 2, nodeSpacing: 8},
 	//textFn: function(d){ return d.time.getFullYear() + " </br> " + d.name;}
 	textFn: function(d){ return d.time.getFullYear() + " - " + d.name;}
 });
