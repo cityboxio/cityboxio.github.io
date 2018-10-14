@@ -558,6 +558,7 @@ color: #1f1f1f;
 		 */
 }
 
+.citybox-missionstatment-photo,
 .citybox-hackathon-photo
 {
 	/* 
@@ -566,6 +567,9 @@ color: #1f1f1f;
 box-shadow: 0 8px 6px -6px black !important;
 filter: brightness(1.5) grayscale(1);
 mix-blend-mode: multiply;
+max-width:100%;
+max-height:100%;
+height: auto;
 }
 /*** end of citybox-hackathon ***/
 
