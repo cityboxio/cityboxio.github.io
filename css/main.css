@@ -11,9 +11,10 @@ html,body
 	border: 5px solid black;
 	opacity: 0.5 !important;
 	width: 90% !important;
+width: 110% !important;
 	 */
 background: white; 
-height: 150% !important;
+height: 100% !important;
 
  }
 
@@ -30,6 +31,42 @@ height: 150% !important;
 	 z-index: 999;
  }
 
+
+ /* map controls */
+.leaflet-left
+{
+}
+.leaflet-bottom 
+{
+	/*
+	 * margin-top: 200px !important;
+	 */	
+margin-bottom: -20px !important;
+margin-right: 5px !important;
+}
+.leaflet-right{
+	/*
+	 * margin-left: 0px !important;
+	 */
+}
+.leaflet-top
+{
+}
+
+.leaflet-control-zoom,
+.leaflet-bar
+{
+	/*
+	 * margin-right: 200px !important;
+	 */
+margin-bottom: -200px !important;
+}
+
+.leaflet-control-minimap
+{
+	margin-right: 45px !important;
+}
+
  .leaflet-control-attribution{
 	 visibility: hidden;
  }
@@ -45,8 +82,12 @@ height: 150% !important;
 
  .leaflet-control-zoom-in,
  .leaflet-control-zoom-out {
-	 padding: 5px;
- }
+	 padding: 1px;
+	 /* 
+	 padding-right: 10px;
+	  * margin-bottom: 1px;
+ */
+}
  .leaflet-control-zoom-out {
  }
 
@@ -233,6 +274,7 @@ box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	align-content: center !important;
 	width: 40%;
 	height: 10%;
+	margin-left: 0px !important;
 	/*
 	margin: 10px;
 	 */
@@ -308,8 +350,8 @@ transition: all 0.1s ease-out;
 		text-shadow: 3px 3px 5px black;
 		opacity: 0.7;
 		padding: 20px;
-		 */
 margin: 20px;
+		 */
 transition: all 0.1s ease-out;
 	}
 
