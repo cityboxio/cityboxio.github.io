@@ -28,9 +28,11 @@ $("#datasource_c").tinyToggle({
 
 $( document ).ready(function() {
 	//console.log( "ready!" );
-	console.log('%c ##############################', 'background: black; color: white');
-	console.log('%c ### welcome to citybox.io! ###', 'background: black; color: white');
-	console.log('%c ##############################', 'background: black; color: white');
+	console.log('%c ####################################', 'background: black; color: lightgreen');
+	console.log('%c ###### welcome to citybox.io! ######', 'background: black; color: lightgreen');
+	console.log('%c ####################################', 'background: black; color: lightgreen');
+	console.log('%c ##### we are hiring unix 1337s #####', 'background: black; color: lightgreen');
+	console.log('%c ####################################', 'background: black; color: lightgreen');
 	/*************************/
 	/*** start of typed.js ***/
 	/*************************/
