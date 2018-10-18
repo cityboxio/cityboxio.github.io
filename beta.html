@@ -48,6 +48,7 @@
 		
 		<!-- <link rel="stylesheet" href="css/noty.css" /> -->
 		
+		<link rel="stylesheet" href="css/notify-metro.css" />
 
 		<link href="css/main.css" rel="stylesheet" type="text/css">
 
@@ -432,6 +433,20 @@
 							<td>1MB</td>
 							<td>
 								<h5>
+									<button onclick="notify('white')">White</button>
+									<script>
+										function notify(style) {
+											$.notify({
+												title: 'opendatahub',
+												text: 'some opendatahub notifications'
+											}, {
+												style: 'metro',
+												className: style,
+												autoHide: false,
+												clickToHide: true
+											});
+										}
+									</script>
 									<i class="fas fa-database" style="color:green"></i>
 								</h5>
 							</td>
@@ -940,6 +955,7 @@ body {
 	  -->
 
 	  <script type="text/javascript" src="js/notify.min.js"></script>
+	  <script type="text/javascript" src="js/notify-metro.js"></script>
 
 	  <script type="text/javascript" src="js/jquery.nicescroll.iframehelper.min.js"></script>
 	  <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
