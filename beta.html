@@ -46,7 +46,7 @@
 		<!--  <link rel="stylesheet" href="css/jquery.gridster.min.css" /> -->
 		<link rel="stylesheet" href="css/gridstack.css" />
 		
-		<link rel="stylesheet" href="css/noty.css" />
+		<!-- <link rel="stylesheet" href="css/noty.css" /> -->
 		
 
 		<link href="css/main.css" rel="stylesheet" type="text/css">
@@ -112,7 +112,7 @@
 						&nbsp; 
 						<a class="menu-link" href="#">opensource</a>
 						&nbsp; 
-						<a class="menu-link" href="#">open research</a>
+						<a class="menu-link" href="#">openresearch</a>
 						&nbsp; 
 						<a class="menu-link" href="#">hackathons</a>
 						</br>
@@ -856,6 +856,7 @@
 				&nbsp; &nbsp;
 				&nbsp; &nbsp;
 				<b>hello</b>@citybox.io
+				<div class="acezero">dff</div>
 			</div>
 		</div>
 		</br>
@@ -903,7 +904,6 @@ body {
 			<div id="status"></div>
 			<div id="status">&nbsp;</div>
 		</div>
-
 	</body>
 
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -938,12 +938,46 @@ body {
 	  <script src="js/jquery.gridster.min.js"></script>
 	  -->
 
-	  <script type="text/javascript" src="js/noty.js"></script>
+	  <script type="text/javascript" src="js/notify.min.js"></script>
 
 	  <script type="text/javascript" src="js/jquery.nicescroll.iframehelper.min.js"></script>
 	  <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
 
 	 <script src="js/main.js"></script>
 	<script>
+$(".acezero").notify(
+	"I'm to the right of this box", 
+	{
+		// whether to hide the notification on click
+		clickToHide: true,
+		// whether to auto-hide the notification
+		autoHide: true,
+		// if autoHide, hide after milliseconds
+		autoHideDelay: 5000,
+		// show the arrow pointing at the element
+		arrowShow: true,
+		// arrow size in pixels
+		arrowSize: 5,
+		// position defines the notification position though uses the defaults below
+		position: '...',
+		// default positions
+		elementPosition: 'bottom left',
+		globalPosition: 'top right',
+		// default style
+		style: 'metro',
+		// default class (string or [string])
+		className: 'error',
+		// show animation
+		showAnimation: 'slideDown',
+		// show animation duration
+		showDuration: 400,
+		// hide animation
+		hideAnimation: 'slideUp',
+		// hide animation duration
+		hideDuration: 200,
+		// padding between element and notification
+		gap: 2
+	}
+);
 	</script>
 </html>
