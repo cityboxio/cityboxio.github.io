@@ -31,7 +31,7 @@ $( document ).ready(function() {
 	console.log('%c ####################################', 'background: black; color: lightgreen');
 	console.log('%c ###### welcome to citybox.io! ######', 'background: black; color: lightgreen');
 	console.log('%c ####################################', 'background: black; color: lightgreen');
-	console.log('%c ##### we are hiring unix 1337s #####', 'background: black; color: lightgreen');
+	console.log('%c ##### we are hiring unix 1337z #####', 'background: black; color: lightgreen');
 	console.log('%c ####################################', 'background: black; color: lightgreen');
 	/*************************/
 	/*** start of typed.js ***/
