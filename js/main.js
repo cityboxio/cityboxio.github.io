@@ -332,7 +332,7 @@ $('.citybox-datasource').on('click',function(){
 				return console.log('Cancelled')
 			}
 			console.log('somthing');
-				//TODO update map panel of the selected things	
+			//TODO update map panel of the selected things	
 			$('.demo-result-custom-vex-dialog').show().html([
 				'<h4>Result</h4>',
 				'<p>',
@@ -522,4 +522,110 @@ chart.visualize().resizeToFit();
 /********** end of timeline ************/
 /***************************************/
 
+/********************************************************/
+/********** start of opendatahub ************/
+/********************************************************/
+$("#range").ionRangeSlider({
+	//hide_min_max: true,
+	//keyboard: true,
+	min: 0,
+	max: 100,
+	from: 0,
+	//to: 4000,
+	//type: 'double',
+	step: 5,
+	prefix: "US$",
+	grid: true,
+	force_edges: true,
+	from_shadow: true,
+	//from_fixed: true, // set minimum amount to pay
+	grid_snap: true,
+	//min_postfix: "FREE ", 
+	//max_postfix: "&nbsp;&nbsp;<i class='fas fa-heart'></i>",
+	//max_postfix: "</br>&nbsp;&nbsp;<i class='fas fa-heart'></i>",
+	onStart: function (data) {
+		console.log(data);
+	},
+	onChange: function (data) {
+		console.log(data);
+	},
+	onFinish: function (data) {
+		console.log(data);
+	},
+	onUpdate: function (data) {
+		console.log(data);
+	}
 });
+
+// gridstacks
+$(function () {
+	var options = {
+	};
+	$('.grid-stack').gridstack(options);
+
+	new function () {
+		this.serializedData = [
+			{x: 0, y: 0, width: 2, height: 2},
+			{x: 3, y: 1, width: 1, height: 2},
+			{x: 4, y: 1, width: 1, height: 1},
+			{x: 2, y: 3, width: 3, height: 1},
+			{x: 1, y: 4, width: 1, height: 1},
+			{x: 1, y: 3, width: 1, height: 1},
+			{x: 2, y: 4, width: 1, height: 1},
+			{x: 2, y: 5, width: 1, height: 1}
+		];
+
+		this.grid = $('.grid-stack').data('gridstack');
+
+		this.loadGrid = function () {
+			this.grid.removeAll();
+			var items = GridStackUI.Utils.sort(this.serializedData);
+			_.each(items, function (node) {
+				this.grid.addWidget($('<div><div class="grid-stack-item-content" /></div>'),
+					node.x, node.y, node.width, node.height);
+			}.bind(this));
+			return false;
+		}.bind(this);
+
+		this.saveGrid = function () {
+			this.serializedData = _.map($('.grid-stack > .grid-stack-item:visible'), function (el) {
+				el = $(el);
+				var node = el.data('_gridstack_node');
+				return {
+					x: node.x,
+					y: node.y,
+					width: node.width,
+					height: node.height
+				};
+			});
+			$('#saved-data').val(JSON.stringify(this.serializedData, null, '    '));
+			return false;
+		}.bind(this);
+
+		this.clearGrid = function () {
+			this.grid.removeAll();
+			return false;
+		}.bind(this);
+
+		$('#save-grid').click(this.saveGrid);
+		$('#load-grid').click(this.loadGrid);
+		$('#clear-grid').click(this.clearGrid);
+
+		this.loadGrid();
+	};
+	$("body").getNiceScroll().resize();	
+});
+
+/********************************************************/
+/********** end of opendatahub ************/
+/********************************************************/
+
+});
+
+
+$(window).on('load', function() { // makes sure the whole site is loaded 
+	$('#status').fadeOut(); // will first fade out the loading animation 
+	$('#preloader').delay(500).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+	//$('body').delay(350).css({'overflow':'visible'});
+	//$('html').css({'overflow-x':'hidden'});
+})
