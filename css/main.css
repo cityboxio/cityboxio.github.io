@@ -3,7 +3,11 @@ html,body
 	margin: auto;
 	width:90%;
 	height:95%;
-	font-family: 'Comfortaa', cursive;
+	font-style: normal !important;
+	font-family: 'Comfortaa', cursive !important; 
+	/* 
+	font-family: 'Comfortaa';
+	 * */
 }
 
 #map { 
@@ -674,19 +678,31 @@ filter: gray saturate(0%) brightness(70%) contrast(1000%);
 
 table {
 	overflow: hidden;
+	display: block;
+	width: 100px;
+	
+	position: sticky;
+	table-layout: fixed;
+	border-collapse: collapse;
 }
 
 td, th {
 	position: relative;
 }
 
-table tbody tr:hover 
+thead
 {
-	
+	position: sticky;
+}
+
+/* table tbody tr:hover */ 
+tr:hover 
+{
 	cursor: pointer;
 	color: black !important;
-	text-shadow: 0px 0px 0.2px black !important;
+	text-shadow: 1px 1px 1px grey !important;
 	/*
+	text-shadow: 0px 0px 0.2px black !important;
 	color: black;
 	0px 8px 13px rgba(0,0,0,0.1),
 	0px 18px 23px rgba(0,0,0,0.1);
