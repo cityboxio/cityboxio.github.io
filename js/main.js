@@ -31,8 +31,23 @@ $( document ).ready(function() {
 	console.log('%c ####################################', 'background: black; color: lightgreen');
 	console.log('%c ###### welcome to citybox.io! ######', 'background: black; color: lightgreen');
 	console.log('%c ####################################', 'background: black; color: lightgreen');
+	console.log('%c ####### ┌─┐┬┌┬┐┬ ┬┌┐ ┌─┐─┐ ┬ #######', 'background: black; color: lightgreen');
+
+	console.log('%c ####### │  │ │ └┬┘├┴┐│ │┌┴┬┘ #######', 'background: black; color: lightgreen');
+
+	console.log('%c ####### └─┘┴ ┴  ┴ └─┘└─┘┴ └─ #######', 'background: black; color: lightgreen');
+	console.log('%c ####################################', 'background: black; color: lightgreen');
+	console.log('%c ####################################', 'background: black; color: lightgreen');
 	console.log('%c ##### we are hiring unix 1337z #####', 'background: black; color: lightgreen');
 	console.log('%c ####################################', 'background: black; color: lightgreen');
+	
+
+	//console.log('%c 
+	//	
+	//	', 'background: black; color: lightgreen');
+
+
+	
 	/*************************/
 	/*** start of typed.js ***/
 	/*************************/
@@ -52,7 +67,11 @@ $( document ).ready(function() {
 	/********************/
 
 	//var map = L.map('map', {drawControl: true}).setView(
-	var map = L.map('map',{zoomControl: false}).setView(
+	var map = L.map('map',{
+		zoomControl: false,
+		dragging: false,
+		doubleClickZoom: false
+	}).setView(
 		//[31.205753, 29.924526], 
 		//[30.0444, 31.2357], //cairo
 		[30.044, 31.235], 
