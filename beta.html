@@ -342,38 +342,121 @@
 			<div class="row">
 				<div class="six columns">
 					<b><h4>api documentation</h4></b>
-					the api interactive documentation will sync with the map and vice-versa.
-					</br> 
-					Internal 
-					dashboard is map+apidocs+opendatahub 
-					https://api.citybox.io/v1/dashboard?commands=
-					https://api.citybox.io/v1/dashboard?queries=
+					<b style="color: red;">live</b> @ <b>https://api.citybox.io/v1</b>
+					</br>
+					generate anonymous apikey button
+					<!--
+	     Use our interactive api documentation to sync with the map and vice-versa.
+	     Internal 
+	     dashboard is map+apidocs+opendatahub 
+	     https://api.citybox.io/v1/dashboard?commands=
+	     https://api.citybox.io/v1/dashboard?queries=
 
-					</br> 
-					Internal 
-					POST https://api.citybox.io/v1/rd?commands=
-					GET https://api.citybox.io/v1/rd?queries=
+	     </br> 
+	     Internal 
+	     POST https://api.citybox.io/v1/rd?commands=
+	     GET https://api.citybox.io/v1/rd?queries=
 
-					</br> 
-					Internal  
-					POST https://api.citybox.io/v1/philosophy?commands=
-					GET https://api.citybox.io/v1/philosophy?queries=
-					</br> 
-					External 
-					POST https://api.citybox.io/v1/opendatahub?commands=
-					GET https://api.citybox.io/v1/opendatahub?queries=
-					</br> 
-					External 
-					POST https://api.citybox.io/v1/users?commands=
-					GET https://api.citybox.io/v1/users?queries=
-					when a dataset is uploaded via anonymous or user then they get transformed as server-side commands and logged/evented into subsets of csv portions! 
-					</br> 
+	     </br> 
+	     Internal  
+	     POST https://api.citybox.io/v1/philosophy?commands=
+	     GET https://api.citybox.io/v1/philosophy?queries=
+	     </br> 
+	     External 
+	     POST https://api.citybox.io/v1/opendatahub?commands=
+	     GET https://api.citybox.io/v1/opendatahub?queries=
+	     </br> 
+	     External 
+	     POST https://api.citybox.io/v1/users?commands=
+	     GET https://api.citybox.io/v1/users?queries=
+	     when a dataset is uploaded via anonymous or user then they get transformed as server-side commands and logged/evented into subsets of csv portions! 
+					-->
+					<table style="width:100%;
+					height:500px;
+					overflow-y:scroll;
+					display:list-item;
+					">
+						<thead>
+							<tr> 
+								<td></td>
+							</tr>
+						</thead>
+						<tbody>	
+							<tr>
+								<td>
+									<b>GET</b> 
+									</br>
+									endpointA url + a testarea for entering params.
+									</br>
+									endpoint queries dropdownlist
+									</br>
+									<button onclick="notify('white')">execute</button>
+									</br>
+									autocopy button of the request in curl(1)	
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<b>POST</b> endpointA url + a testarea for entering params.
+									</br>
+									endpoint commands dropdownlist
+									</br>
+									<button onclick="notify('white')">execute</button>
+									</br>
+									autocopy button of the request in curl(1)	
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 				<div class="six columns">
-					</br>
-					</br>
-					</br>
-					api results with vertical scroll
+						</br>
+						</br>
+						</br>
+						</br>
+						</br>
+						<div style="
+						height:500px;
+						overflow-y:scroll;
+						">
+							<b>server response</b> 
+							</br>
+							notify: response header of url with params..
+							</br>
+							notify: response body of url with params..
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+							</br>
+						</div>
 				</div>
 			</div>
 			</br>
@@ -1036,7 +1119,12 @@
 			     <div style="text-align: right !important; padding: 20px;">
 				     <a class="btn btn-dark btn-big" style="min-width: 100% !important">
 					     <b>
-						     engage us 
+						     engage the community 
+						     <!-- a modal with slickslider>> slide1:irc.citybox.io; slide2: search logs; slide3 selected logsearch result view --> 
+						     <!-- webinterface for chrooted irc.citybox.io --> 
+						     <!-- maybe https://github.com/confact/dunirc.git  --> 
+						     <!-- maybe https://www.unrealircd.org/docs/WebSocket_support  --> 
+						     <!-- maybe an IRC server in base with chroot? i guess not but ask anyway  --> 
 					     </b>
 				     </a>
 			     </div>
@@ -1046,6 +1134,8 @@
 			     </br>
 			     </br>
 			     some openculture happy photos, yay!
+			     </br>
+			     gif to show how to engage the community and chat
 		     </div>
 	     </div>
 				</div>
