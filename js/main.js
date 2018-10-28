@@ -105,8 +105,8 @@ $( document ).ready(function() {
 	//L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
 	//L.tileLayer('http://b.tile.stamen.com/toner-hybrid/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
 	//L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
-	blackwhite='http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png';
-	osm=L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
+	blackwhite='https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png';
+	osm=L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
 	//L.tileLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', {attribution: '&copy; '+mapLink+', '+wholink,maxZoom: 18,}).addTo(map);
 
 	//var osm2 = new L.TileLayer(blackwhite, {minZoom: 0, maxZoom: 13, attribution: "blah"}).addTo(map);
