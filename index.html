@@ -1,130 +1,202 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="img/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8" />
-		<title>citybox</title>
+		<title>citybox.io</title>
 		<link rel="stylesheet" href="css/leaflet.css" type="text/css"/>
-		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+
+		<link href="css/comfortaa.css" rel="stylesheet">
+
 		<link href="css/easy-autocomplete.min.css" rel="stylesheet" type="text/css">
 		<link href="css/easy-autocomplete.themes.min.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-		<link href="css/tinytoggle.min.css" rel="stylesheet">
 
-		<!-- Leaflet Plugins -->
-		<link rel="stylesheet" href="css/leaflet.draw.css" />
-		<link rel="stylesheet" href="css/Control.MiniMap.min.css" />
+	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> 
 
-		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-		<link rel="stylesheet" type="text/css" href="css/normalize.min.css"/>
-		<link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
-		<link rel="stylesheet" type="text/css" href="css/vex.css"/>
-		<link rel="stylesheet" type="text/css" href="css/vex-theme-wireframe.css"/>
+	  <link href="css/tinytoggle.min.css" rel="stylesheet">
 
-		<link href="css/main.css" rel="stylesheet" type="text/css">
+	  <!-- Leaflet Plugins -->
+	  <link rel="stylesheet" href="css/leaflet.draw.css" />
+	  <link rel="stylesheet" href="css/Control.MiniMap.min.css" />
 
+	  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+	  <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+	  <link rel="stylesheet" type="text/css" href="css/normalize.min.css"/>
+	  <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+	  <link rel="stylesheet" type="text/css" href="css/vex.css"/>
+	  <link rel="stylesheet" type="text/css" href="css/vex-theme-wireframe.css"/>
+
+	  <link rel="stylesheet" href="css/ion.rangeSlider.css" />
+	  <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
+
+	  <link rel="stylesheet" href="css/notify-metro.css" />
+
+	  <link href="css/main.css" rel="stylesheet" type="text/css">
 
 	</head>
-
-
-	<script type="text/javascript">
-	</script>
 	<body>
 
-
-		<!--
-	  <div id="map" style="width: 900px; height: 900px"></div>
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.10.6/jquery.typeahead.css" type="text/css">
-	  <link href="css/easy-autocomplete.themes.min.css.map" rel="stylesheet" type="application/json">
-	  <link href="css/maps/easy-autocomplete.themes.min.css.map" rel="stylesheet" type="application/json">
-	  <link href="css/maps/easy-autocomplete.min.css.map" rel="stylesheet" type="text/css">
-		-->
+		<b style="color: white; background-color: red"> 
+			&nbsp; &nbsp;
+			βeta
+			&nbsp; &nbsp;
+		</b>
 		<div class="header-container">
-			<!-- columns should be the immediate child of a .row -->
 			<div class="row">
 				<div class="five columns">
-					</br>
 					<img class="logo" src="img/citybox.png" alt="citybox"/>
 					</br>
 					<div id="typed-strings">
-						<p><strong>opendata</strong>hub | <strong>worldcities</strong></p>
+						<p><strong>urban</strong>sandboxing | <strong>worldcities</strong></p>
 						<p>we <i class="fas fa-heart"></i> <strong>opensource</strong></p>
 						<p>we <i class="fas fa-heart"></i> <strong>hackathons</strong></p>
 						<p>we <i class="fas fa-heart"></i> <strong>opendata</strong></p>
-						<p><strong>opendata</strong>hub | <strong>worldcities</strong></p>
+						<p><strong>urban</strong>sandboxing | <strong>worldcities</strong></p>
 					</div>
 					<span id="typed"></span>
 				</div>
-				<div class="six columns">
-					<!--<div class="copyright"> -->
-					</br>
-					</br>
+				<div class="seven columns">
 				</div>
 			</div>
-		</div>
-		</br>
-		<hr>
-		<div id="map" class="overlay"></div>
-		<hr>
-		</br>
-	
-		<!-- .container is main centered wrapper -->
-		<div id="citybox-datasource-nav" class="citybox-datasource-nav-container">
-			<!-- columns should be the immediate child of a .row -->
-			<div class="row">
-				<div class="six columns">
-					<div class="fourth columns arrows">
-					</div>
-				</div>
-			</div>
-			<!-- just use a number and class 'column' or 'columns' -->
-			<div class="row">
-				<div class="six columns">
-					<div class="fourth columns sliderfade">
-						<div class="slider slider1">
-							<div class="citybox-datasource">
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-			<!-- there are a few shorthand columns widths as well -->
-			<div class="row">
-				<div class="six columns">
-					<div class="fourth columns arrows">
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="footer" class="footer-container">
-			<!-- columns should be the immediate child of a .row -->
-			<div class="row copyright">
-				<b>&copy; citybox.io</b>
-					&nbsp; &nbsp;
-					&nbsp; &nbsp;
-					<b>HQ</b>
-					73 Road 15 Maadi,
-					Cairo, Egypt
-					&nbsp; &nbsp;
-					&nbsp; &nbsp;
-					<b>hello</b>@citybox.io
 			</div>
 			</br>
-		</div>
+			<hr>
+			<div class="citybox-sandbox-searchbar-container">
+				<div class="row">
+					<div class="six columns">
+						&nbsp; &nbsp;
+					</div>
+					<div class="five columns">
+						&nbsp; &nbsp;
+					</div>
+				</div>
+			</div>
+			</br>
+			<div id="map" class="overlay"></div>
+			</br>
+			</div>
 
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/jquery.easy-autocomplete.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-		<script src="js/jquery.tinytoggle.min.js" type="text/javascript"></script>
-		<script src="js/leaflet.js"></script>
-		<script src="js/leaflet.draw.js" type="text/javascript"></script>
-		<script src="js/Control.MiniMap.min.js" type="text/javascript"></script>
-		<script type="text/javascript" src="js/slick.min.js"></script>
-		<!--	<script type="text/javascript" src="js/vex.min.js"></script> -->
-		<script type="text/javascript" src="js/vex.combined.min.js"></script>
-		<script src="js/main.js"></script>
+		</div>
+		</br>
+		<div id="timeline"></div>
+		<hr>
+		</br>
+		</br>
+	     <div id="footer" class="footer-container">
+		     <!-- columns should be the immediate child of a .row -->
+		     <div class="row copyright">
+			     <b>&copy; citybox.io</b>
+			     &nbsp; &nbsp;
+			     &nbsp; &nbsp;
+			     <b>HQ</b>
+			     73 Road 15 Maadi,
+			     Cairo, Egypt
+			     &nbsp; &nbsp;
+			     &nbsp; &nbsp;
+			     <b>hello</b>@citybox.io
+		     </div>
+	     </div>
+	     </br>
+	     </br>
+	     </br>
+	     <style>
+
+/*** start of preloader ***/
+body {
+	/* 
+	 */
+	overflow: hidden; 
+}
+/* Preloader */
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+	/* change if the mask should have another color then white */
+	z-index: 99;
+	/* makes sure it stays on top */
+}
+#status {
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	left: 42%;
+	/* centers the loading animation horizontally one the screen */
+	top: 20%;
+	/* centers the loading animation vertically one the screen */
+	background-image: url('img/preloading.gif');
+	/* path to your loading animation */
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: -100px 0 0 -100px;
+	/* is width and height divided by two */
+}
+/*** end of preloader ***/
+	     </style>
+
+	     <div id="preloader">
+		     <div id="status"></div>
+		     <div id="status">&nbsp;</div>
+	     </div>
 	</body>
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+
+	<script type="text/javascript" src="js/jquery.easy-autocomplete.min.js"></script>
+
+	<script type="text/javascript" src="js/typed.js@2.0.9"></script>
+
+	<script type="text/javascript" src="js/jquery.tinytoggle.min.js"></script>
+	<script type="text/javascript" src="js/leaflet.js"></script>
+	<script type="text/javascript" src="js/leaflet.draw.js"></script>
+	<script type="text/javascript" src="js/Control.MiniMap.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/vex.combined.min.js"></script>
+
+
+	<script type="text/javascript" src="js/d3.v4.min.js"></script>
+	<script type="text/javascript" src="js/d3kit.min.js"></script>
+	<script type="text/javascript" src="js/labella.min.js"></script>
+	<script type="text/javascript" src="js/d3kit-timeline.min.js"></script>
+	<script type="text/javascript" src="js/ion.rangeSlider.js"></script>
+
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lodash.min.js"></script>
+	<script type="text/javascript" src="js/gridstack.js"></script>
+	<script type="text/javascript" src="js/gridstack.jQueryUI.js"></script>
+
+	<script type="text/javascript" src="js/notify.min.js"></script>
+	<script type="text/javascript" src="js/notify-metro.js"></script>
+
+	<script type="text/javascript" src="js/jquery.nicescroll.iframehelper.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+
+	<script src="js/main.js"></script>
+	<script>
+
+	</script>
 </html>
