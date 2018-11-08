@@ -1031,9 +1031,14 @@
 				</div>
 			</div>
 
-			<div id="dashboard" class="slider">
+			<div id="dashboard" class="">
 				<div>
 					<h3>1</h3>
+					<div class="row">
+						<div class="six columns">
+						this nav concept allows for more sections to be included under each nav_link	
+						</div>
+					</div>
 				</div>
 				<div>
 					<h3>2</h3>
@@ -1231,7 +1236,7 @@ body {
 	margin: -100px 0 0 -100px;
 	/* is width and height divided by two */
 }
-/*** end of preloader ***/
+							    /*** end of preloader ***/
 		</style>
 
 		<div id="preloader">
@@ -1285,15 +1290,42 @@ body {
 	  <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
 
 	  <script src="js/main.js"></script>
+	  <style>
+.slider {
+	box-shadow: 0 20px 50px -25px rgba(0, 0, 0, 1);
+}
+
+		.slider-track {
+			transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+		}
+
+		.item {
+			height: 100%;
+			position: relative;
+			z-index: 1;
+
+				img {
+					width: 100%;
+					transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+					transform: scale(1.2);
+				}
+
+				&.slick-active img {
+					transform: scale(1);
+				}
+		}
+	  </style>
 	  <script>
 		  $('#dashboard').slick({
 			  dots: true,
 			  infinite: true,
 			  mobileFirst: true,
-			  speed: 300,
+			  speed: 900,
 			  slidesToShow: 1,
 			  fade: true,
 			  draggable: true, // enable mouse dragging
+			  cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+			  touchThreshold: 100,
 			  adaptiveHeight: true
 		  });
 $('#dashboard').on('afterChange', function(event, slick, currentSlide, nextSlide){
