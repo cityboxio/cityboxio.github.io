@@ -23,44 +23,46 @@
 		<meta charset="utf-8" />
 		<title>citybox.io</title>
 		<link rel="stylesheet" href="css/leaflet.css" type="text/css"/>
-
+	
 		<link href="css/comfortaa.css" rel="stylesheet">
-
+		
 		<link href="css/easy-autocomplete.min.css" rel="stylesheet" type="text/css">
 		<link href="css/easy-autocomplete.themes.min.css" rel="stylesheet" type="text/css">
-
+	
 	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> 
 
-	  <link href="css/tinytoggle.min.css" rel="stylesheet">
+		<link href="css/tinytoggle.min.css" rel="stylesheet">
 
-	  <!-- Leaflet Plugins -->
-	  <link rel="stylesheet" href="css/leaflet.draw.css" />
-	  <link rel="stylesheet" href="css/Control.MiniMap.min.css" />
+		<!-- Leaflet Plugins -->
+		<link rel="stylesheet" href="css/leaflet.draw.css" />
+		<link rel="stylesheet" href="css/Control.MiniMap.min.css" />
 
-	  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-	  <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-	  <link rel="stylesheet" type="text/css" href="css/normalize.min.css"/>
-	  <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
-	  <link rel="stylesheet" type="text/css" href="css/vex.css"/>
-	  <link rel="stylesheet" type="text/css" href="css/vex-theme-wireframe.css"/>
+		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="css/normalize.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+		<link rel="stylesheet" type="text/css" href="css/vex.css"/>
+		<link rel="stylesheet" type="text/css" href="css/vex-theme-wireframe.css"/>
 
-	  <link rel="stylesheet" href="css/ion.rangeSlider.css" />
-	  <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
+		<link rel="stylesheet" href="css/ion.rangeSlider.css" />
+		<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
 
-	  <link rel="stylesheet" href="css/notify-metro.css" />
+		<link rel="stylesheet" href="css/gridstack.css" />
+		
+		
+		<link rel="stylesheet" href="css/notify-metro.css" />
 
-	  <link href="css/main.css" rel="stylesheet" type="text/css">
+		<link href="css/main.css" rel="stylesheet" type="text/css">
 
 	</head>
 	<body>
-			&nbsp; &nbsp;
-			&nbsp; &nbsp;
 		<b style="color: white; background-color: red"> 
 			&nbsp; &nbsp;
 			βeta
 			&nbsp; &nbsp;
 		</b>
 		<div class="header-container">
+			<!-- columns should be the immediate child of a .row -->
 			<div class="row">
 				<div class="five columns">
 					<img class="logo" src="img/citybox.png" alt="citybox"/>
@@ -75,50 +77,82 @@
 					<span id="typed"></span>
 				</div>
 				<div class="seven columns">
+					<!--<div class="copyright"> -->
+					<div class="citybox-menu">
+						<b>
+							<a class="" href="#">urban sandboxing</a>
+						</b> 
+						| 
+						&nbsp;
+						<a class="menu-link" href="#">map</a>
+						&nbsp;
+						<a class="menu-link" href="#">api documentation</a>
+						&nbsp;
+						<a class="menu-link" href="#">opendatahub</a>
+						</br>
+					</div>
+					</br>
+					</div>
 				</div>
 			</div>
-		</div>
-		</br>
-		<hr>
-		<div class="citybox-sandbox-searchbar-container">
+			</br>
+			<hr>
+			<!-- 
+	   <div class="citybox-sandbox-searchbar-container">
 				<div class="row">
 					<div class="six columns">
 						&nbsp; &nbsp;
 					</div>
 					<div class="five columns">
-						&nbsp; &nbsp;
+						<input class="searchbar" id="categories-basic" />	
 					</div>
 				</div>
-			</div>
+			</div> 
+			-->
 			</br>
 			<div id="map" class="overlay"></div>
 			</br>
-			</div>
+			<!--
+			<div class="citybox-sandbox-timeline-parent-container">
+				<div class="row">
+					<div class="twelve columns">
+						</br>
+					</div>
+				</div>
 
+			</div>
+			-->
 		</div>
 		</br>
+		</br>
 		<div id="timeline"></div>
+		<!--
+		-->
+		<!-- .container is main centered wrapper -->
+		<div id="citybox-datasource-nav" class="citybox-datasource-nav-container">
+		</div>
+
 		<hr>
 		</br>
 		</br>
-	     <div id="footer" class="footer-container">
-		     <!-- columns should be the immediate child of a .row -->
-		     <div class="row copyright">
-			     <b>&copy; citybox.io</b>
-			     &nbsp; &nbsp;
-			     &nbsp; &nbsp;
-			     <b>HQ</b>
-			     73 Road 15 Maadi,
-			     Cairo, Egypt
-			     &nbsp; &nbsp;
-			     &nbsp; &nbsp;
-			     <b>hello</b>@citybox.io
-		     </div>
-	     </div>
-	     </br>
-	     </br>
-	     </br>
-	     <style>
+		<div id="footer" class="footer-container">
+			<!-- columns should be the immediate child of a .row -->
+			<div class="row copyright">
+				<b>&copy; citybox.io</b>
+				&nbsp; &nbsp;
+				&nbsp; &nbsp;
+				<b>HQ</b>
+				73 Road 15 Maadi,
+				Cairo, Egypt
+				&nbsp; &nbsp;
+				&nbsp; &nbsp;
+				<b>hello</b>@citybox.io <b>
+			</div>
+		</div>
+		</br>
+		</br>
+		</br>
+		<style>
 
 /*** start of preloader ***/
 body {
@@ -154,12 +188,12 @@ body {
 	/* is width and height divided by two */
 }
 /*** end of preloader ***/
-	     </style>
+		</style>
 
-	     <div id="preloader">
-		     <div id="status"></div>
-		     <div id="status">&nbsp;</div>
-	     </div>
+		<div id="preloader">
+			<div id="status"></div>
+			<div id="status">&nbsp;</div>
+		</div>
 	</body>
 
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -167,16 +201,16 @@ body {
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
 
 	<script type="text/javascript" src="js/jquery.easy-autocomplete.min.js"></script>
-
+	
 	<script type="text/javascript" src="js/typed.js@2.0.9"></script>
-
+	
 	<script type="text/javascript" src="js/jquery.tinytoggle.min.js"></script>
 	<script type="text/javascript" src="js/leaflet.js"></script>
 	<script type="text/javascript" src="js/leaflet.draw.js"></script>
 	<script type="text/javascript" src="js/Control.MiniMap.min.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/vex.combined.min.js"></script>
-
+	
 
 	<script type="text/javascript" src="js/d3.v4.min.js"></script>
 	<script type="text/javascript" src="js/d3kit.min.js"></script>
@@ -185,18 +219,18 @@ body {
 	<script type="text/javascript" src="js/ion.rangeSlider.js"></script>
 
 
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/lodash.min.js"></script>
-	<script type="text/javascript" src="js/gridstack.js"></script>
-	<script type="text/javascript" src="js/gridstack.jQueryUI.js"></script>
+	 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	 <script type="text/javascript" src="js/lodash.min.js"></script>
+	 <script type="text/javascript" src="js/gridstack.js"></script>
+	 <script type="text/javascript" src="js/gridstack.jQueryUI.js"></script>
 
-	<script type="text/javascript" src="js/notify.min.js"></script>
-	<script type="text/javascript" src="js/notify-metro.js"></script>
+	  <script type="text/javascript" src="js/notify.min.js"></script>
+	  <script type="text/javascript" src="js/notify-metro.js"></script>
 
-	<script type="text/javascript" src="js/jquery.nicescroll.iframehelper.min.js"></script>
-	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+	  <script type="text/javascript" src="js/jquery.nicescroll.iframehelper.min.js"></script>
+	  <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
 
-	<script src="js/main.js"></script>
+	 <script src="js/main.js"></script>
 	<script>
 
 	</script>

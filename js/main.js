@@ -69,8 +69,10 @@ $( document ).ready(function() {
 	//var map = L.map('map', {drawControl: true}).setView(
 	var map = L.map('map',{
 		zoomControl: false,
-		dragging: false,
-		doubleClickZoom: false
+		dragging: true,
+		//dragging: false,
+		doubleClickZoom:true 
+		//doubleClickZoom: false
 	}).setView(
 		//[31.205753, 29.924526], 
 		//[30.0444, 31.2357], //cairo
@@ -174,6 +176,22 @@ $( document ).ready(function() {
 	}
 	//L.control.datasourcenav({ position: 'bottomleft' }).addTo(map);
 	L.control.datasourcetimeline({ position: 'topright' }).addTo(map);
+	//TODO checkout for all neighbouerhoods in one dataset
+	//TODO https://asmaloney.com/2014/01/code/creating-an-interactive-map-with-leaflet-and-openstreetmap/
+	//TODO https://gadm.org/maps/EGY/alqahirah_2.html
+	var myIcon = L.icon({
+		iconUrl: './img/icon.gif',
+		iconSize: [20, 20],
+		iconAnchor: [22, 94],
+		popupAnchor: [-3, -76]
+		//shadowUrl: 'my-icon-shadow.png',
+		//shadowSize: [68, 95],
+		//shadowAnchor: [22, 94]
+	});
+	//L.marker([29.9627, 31.2769], {icon: myIcon}).addTo(map);
+
+
+	L.marker([29.9627, 31.2769],{icon: myIcon}).bindPopup( 'Maadi Avg. Price per m2</br> <b>6,500 EGP</b> (Apartment)</br> <b>16,000 EGP</b> (Villa)' ).addTo( map );
 
 
 	//
